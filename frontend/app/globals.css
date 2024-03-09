@@ -59,7 +59,7 @@ h2 {
 
 @layer base {
   @font-face {
-    font-family: 'Quicksand';
+    font-family: "Quicksand";
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -80,16 +80,20 @@ h2 {
   }
 
   .green__gradient {
-    background: linear-gradient(180deg,
-        rgba(188, 165, 255, 0) 0%,
-        #52bdaa 100%);
+    background: linear-gradient(
+      180deg,
+      rgba(188, 165, 255, 0) 0%,
+      #52bdaa 100%
+    );
     filter: blur(1000px);
   }
 
   .pink__gradient {
-    background: linear-gradient(180deg,
-        rgba(188, 165, 255, 0) 0%,
-        #ffd6d6 100%);
+    background: linear-gradient(
+      180deg,
+      rgba(188, 165, 255, 0) 0%,
+      #ffd6d6 100%
+    );
     filter: blur(100px);
   }
 
@@ -105,15 +109,5 @@ h2 {
     width: 100%;
     background-color: white;
     padding: 4px 10vw;
-  }
-
-  .sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-  }
-
-  .sticky+.content {
-    padding-top: 102px;
   }
 }
