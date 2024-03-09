@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
+import Footer from "@/components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,14 +26,16 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <main className="flex min-h-screen flex-col items-center justify-between">
-          <div className="absolute z-[-1] top-[-25vw] left-[-25vw] green__gradient w-[50vw] h-[50vw] blur-[24vw]"></div>
+          <div className="fixed z-[-1] top-[-25vw] left-[-25vw] green__gradient w-[50vw] h-[50vw] blur-[24vw]"></div>
           <div className="absolute z-[-1] top-[-24vw] left-[50vw] pink__gradient w-[32vw] h-[32vw] blur-[20vw]"></div>
-          <div className="fixed z-[-1] top-[25vh] right-[-28vh] green__gradient w-[50vh] h-[50vh] blur-[28vh]"></div>
+          <div className="fixed z-[-1] top-[25vh] right-[-28vh] green__gradient w-[50vh] h-[50vh] blur-[25vh]"></div>
           <div className="fixed z-[-1] top-[10vh] left-[25vw] white__gradient w-[50vw] h-[50vw] blur-[28vw]"></div>
-          <div className="flex flex-col w-full ">
+          <div className="flex flex-col w-full pb-8">
             <Header />
+
             <section className="pt-40 px-[10vw]">{children}</section>
           </div>
+          <Footer />
         </main>
       </body>
     </html>
