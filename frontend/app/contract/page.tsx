@@ -1,5 +1,5 @@
 import PageTitle from "@/components/page-title/page-title";
-import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { PageTitleUnderlineType } from "@/constants";
 
 const Paraph = (props: { title: string, content: string[], other: any }) => {
@@ -96,7 +96,7 @@ const ContractPage = () => (
                             <TableCell className="border-b border-r">Hoàn thành nhưng thời gian muộn</TableCell>
                             <TableCell className="border-b border-r">Không hoàn thành công việc</TableCell>
                         </TableRow>
-                        <TableRow className="border-none">
+                        <TableRow className="border-none bg-primary/10">
                             <TableCell className="bg-primary text-white font-bold">Tinh thần hợp tác</TableCell>
                             <TableCell className="border-b border-r">Hòa đồng, thân thiện, giúp đỡ thành viên khác</TableCell>
                             <TableCell className="border-b border-r">Tôn trọng các thành viên khác nhưng cách làm việc còn khá riêng lẻ</TableCell>
@@ -110,7 +110,7 @@ const ContractPage = () => (
                             <TableCell className="border-b border-r">Vắng 1-2 buổi và còn đi trễ</TableCell>
                             <TableCell className="border-b border-r">Không tham gia hoạt động của nhóm trên 2 buổi</TableCell>
                         </TableRow>
-                        <TableRow className="border-none">
+                        <TableRow className="border-none bg-primary/10">
                             <TableCell className="bg-primary text-white font-bold">Đóng góp ý kiến</TableCell>
                             <TableCell className="border-b border-r">Có nhiều ý tưởng sáng tạo, tích cực, mang tính đột phá</TableCell>
                             <TableCell className="border-b border-r">Đóng góp nhiều ý tưởng, nhưng tính đột phá không cao</TableCell>

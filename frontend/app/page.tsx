@@ -1,4 +1,5 @@
 import Introduce from "@/components/home/introduce";
+import MemberWithTitle from "@/components/home/member-with-title";
 import Tool from "@/components/home/tool";
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <div className="flex md:mt-32 mt-20 flex-col gap-32">
       <Introduce />
       <Tool />
+      <MemberWithTitle />
     </div>
   );
 }
