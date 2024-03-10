@@ -1,6 +1,5 @@
 import PageTitle from "@/components/page-title/page-title";
 import UserCard from "@/components/user/user-card";
-import { GoogleMap, withGoogleMap, withScriptjs } from "react-google-maps";
 
 const ContactPage = () => {
     return (
