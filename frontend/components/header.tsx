@@ -19,16 +19,19 @@ const Header = () => {
                 : "h-24 pt-10"
             }`}
       >
-        <Image
-          className={`object-contain w-auto h-auto origin-left transition duration-200 ${
-            scrolled ? "scale-75" : "scale-100"
-          }`}
-          src="/icon.png"
-          priority
-          width={100}
-          height={100}
-          alt="logo"
-        ></Image>
+        <Link href={"/"}>
+          <Image
+            className={`object-contain w-auto h-auto origin-left transition duration-200 ${
+              scrolled ? "scale-75" : "scale-100"
+            }`}
+            src="/icon.png"
+            priority
+            width={100}
+            height={100}
+            alt="logo"
+          ></Image>
+        </Link>
+
         <div className="hidden lg:gap-10 gap-5 md:flex">
           {sidebarItems.map((item) => (
             <Link href={item.href} key={item.href}>

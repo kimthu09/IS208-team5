@@ -30,7 +30,7 @@ export default function RootLayout({
           <div className="absolute z-[-1] top-[-24vw] left-[50vw] pink__gradient w-[32vw] h-[32vw] blur-[20vw]"></div>
           <div className="fixed z-[-1] top-[25vh] right-[-28vh] green__gradient w-[50vh] h-[50vh] blur-[25vh]"></div>
           <div className="fixed z-[-1] top-[10vh] left-[25vw] white__gradient w-[50vw] h-[50vw] blur-[28vw]"></div>
-          <div className="flex flex-col w-full pb-8">
+          <div className="flex flex-col w-full pb-20">
             <Header />
 
             <section className="pt-40 px-[10vw]">{children}</section>
