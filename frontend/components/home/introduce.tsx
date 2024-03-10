@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Introduce = () => {
   return (
@@ -7,14 +8,17 @@ const Introduce = () => {
         <h1 className="font-bold md:text-6xl text-5xl  md:leading-tight leading-tight md:text-left text-center">
           Quản Lý Dự Án Công Nghệ Thông Tin
         </h1>
-        <Image
-          className={`object-contain w-full h-auto mt-8 mb-12 max-w-[500px]`}
-          src="/curve-line.svg"
-          priority
-          width={100}
-          height={100}
-          alt="line"
-        ></Image>
+        <Link href="https://storyset.com/people">
+          <Image
+            className={`object-contain w-full h-auto mt-8 mb-12 max-w-[500px]`}
+            src="/curve-line.svg"
+            priority
+            width={100}
+            height={100}
+            alt="line"
+          ></Image>
+        </Link>
+
         <p className="text-lg font-semibold w-full max-w-[500px] md:text-left text-center">
           Môn học tập trung vào việc trình bày và áp dụng các khái niệm cơ bản
           liên quan đến quản lý dự án công nghệ thông tin.
