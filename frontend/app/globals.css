@@ -79,6 +79,9 @@ h2 {
     scroll-behavior: smooth;
   }
 
+  h2 {
+    @apply text-4xl font-bold;
+  }
   .green__gradient {
     background: linear-gradient(
       180deg,

@@ -1,6 +1,15 @@
+import { IconType } from "react-icons";
+import { SiJirasoftware } from "react-icons/si";
+import { TbBrandOnedrive } from "react-icons/tb";
+import { FaGithub } from "react-icons/fa";
 export type SidebarItem = {
   title: string;
   href: string;
+};
+export type ToolItem = {
+  title: string;
+  href: string;
+  icon: IconType;
 };
 export const sidebarItems: SidebarItem[] = [
   {
@@ -23,8 +32,22 @@ export const sidebarItems: SidebarItem[] = [
     title: "Liên hệ",
     href: "/contact",
   },
+];
+
+export const toolItems: ToolItem[] = [
   {
-    title: "Quy tắc",
-    href: "/rule",
+    title: "Jira",
+    href: "#",
+    icon: SiJirasoftware,
+  },
+  {
+    title: "OneDrive",
+    href: "#",
+    icon: TbBrandOnedrive,
+  },
+  {
+    title: "GitHub",
+    href: "#",
+    icon: FaGithub,
   },
 ];
