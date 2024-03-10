@@ -6,7 +6,7 @@ const Tool = () => {
   return (
     <div className="w-full flex-col items-center gap-14">
       <h2 className="text-center text-4xl">Công cụ sử dụng</h2>
-      <div className="flex justify-around pt-16 text-muted-foreground">
+      <div className="flex justify-around pt-16 text-muted-foreground flex-wrap gap-8">
         {toolItems.map((item) => (
           <Link
             key={item.title}
