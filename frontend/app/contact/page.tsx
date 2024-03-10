@@ -1,10 +1,11 @@
 import PageTitle from "@/components/page-title/page-title";
 import UserCard from "@/components/user/user-card";
+import { PageTitleUnderlineType } from "@/constants";
 
 const ContactPage = () => {
     return (
         <div className="flex flex-col gap-16 items-center">
-            <PageTitle title="Liên hệ" />
+            <PageTitle title="Liên hệ" type={PageTitleUnderlineType.Type1} />
             <div className="flex flex-wrap gap-16 items-center justify-center">
                 <UserCard
                     avaUrl={"/images/ava/Mai.png"}
