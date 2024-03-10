@@ -57,3 +57,27 @@ export enum PageTitleUnderlineType {
   Type2 = 2,
   Type3 = 3
 }
+
+export interface DocumentItem {
+  title: string;
+  bienBanPdfPath: string;
+  phanCongPdfPath: string;
+}
+
+export const documentItems: DocumentItem[] = [
+  {
+    title: "Biên bản cuộc họp và phân công công việc lần 1",
+    bienBanPdfPath: "/files/documents/1/bien-ban.pdf",
+    phanCongPdfPath: "/files/documents/1/phan-cong.pdf"
+  },
+  {
+    title: "Biên bản cuộc họp và phân công công việc lần 2",
+    bienBanPdfPath: "/files/documents/2/bien-ban.pdf",
+    phanCongPdfPath: "/files/documents/2/phan-cong.pdf"
+  },
+  {
+    title: "Biên bản cuộc họp và phân công công việc lần 3",
+    bienBanPdfPath: "/files/documents/3/bien-ban.pdf",
+    phanCongPdfPath: "/files/documents/3/phan-cong.pdf"
+  }
+] 
