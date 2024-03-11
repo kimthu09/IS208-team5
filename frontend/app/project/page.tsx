@@ -10,7 +10,7 @@ const ProjectPage = () => {
       <PageTitle title="Đồ án" type={PageTitleUnderlineType.Type2} />
       <div className="flex gap-8 md:flex-row flex-col self-start items-center">
         <div className="basis-2/5 px-16 lg:block hidden">
-          <Link href="https://storyset.com/people">
+          <Link href="https://storyset.com/people" target="_blank">
             <Image
               className={`object-contain w-full h-auto`}
               src="/company.png"
@@ -54,7 +54,7 @@ const ProjectPage = () => {
           <p className="text-lg font-medium">Đang cập nhật</p>
         </div>
         <div className="basis-2/5 px-16 lg:flex hidden">
-          <Link href="https://storyset.com/people">
+          <Link href="https://storyset.com/people" target="_blank">
             <Image
               className={`object-contain w-full h-auto`}
               src="/web.png"

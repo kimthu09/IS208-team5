@@ -9,7 +9,7 @@ export type SidebarItem = {
 export type ToolItem = {
   title: string;
   href: string;
-  icon: IconType;
+  icon: String;
 };
 export const sidebarItems: SidebarItem[] = [
   {
@@ -38,17 +38,17 @@ export const toolItems: ToolItem[] = [
   {
     title: "Jira",
     href: "#",
-    icon: SiJirasoftware,
+    icon: "jira",
   },
   {
     title: "OneDrive",
     href: "#",
-    icon: TbBrandOnedrive,
+    icon: "onedrive",
   },
   {
     title: "GitHub",
     href: "#",
-    icon: FaGithub,
+    icon: "github",
   },
 ];
 
