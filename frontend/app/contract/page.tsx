@@ -24,7 +24,7 @@ const Paraph = (props: { title: string, content: string[], other: any }) => {
 const ContractPage = () => (
     <div className="flex flex-col gap-16 items-center h-fit">
         <PageTitle title="Hợp đồng" type={PageTitleUnderlineType.Type3} />
-        <iframe src="/files/contract/hop-dong-thanh-lap-nhom.pdf" className="w-full h-[500px]" />
+        <iframe src="/files/contract/hop-dong-thanh-lap-nhom.pdf" className="w-full" height={800} />
         <div className="flex flex-col gap-8">
             <Paraph
                 title={"1. Các nguyên tắc làm việc nhóm"}
