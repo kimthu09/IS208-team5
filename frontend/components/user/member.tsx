@@ -1,3 +1,4 @@
+import RevealOnScroll from "../reveal-on-scroll";
 import UserCard from "./user-card";
 
 const Member = () => {
