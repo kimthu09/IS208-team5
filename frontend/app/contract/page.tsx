@@ -1,8 +1,10 @@
 import PageTitle from "@/components/page-title/page-title";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { PageTitleUnderlineType } from "@/constants";
+import Link from "next/link";
+import { FaFilePdf } from "react-icons/fa6";
 
-const Paraph = (props: { title: string, content: string[], other: any }) => {
+const Paraph = (props: { title: string, content: React.ReactElement[], other: any }) => {
     const { title, content, other } = props;
     return (
         <div className="self-stretch flex flex-col gap-4">
@@ -10,9 +12,9 @@ const Paraph = (props: { title: string, content: string[], other: any }) => {
                 {title}
             </h2>
             {
-                content.length == 1 ? <p className="ml-4">{content[0]}</p> : <ul>
+                content.length == 1 ? content[0] : <ul>
                     {content.map((item, index) => (
-                        <li className="list-item list-disc ml-8 text-primary" key={index}><p className="text-black">{item}</p></li>
+                        <li className="list-item list-disc ml-8 text-primary" key={index}>{item}</li>
                     ))}
                 </ul>
             }
@@ -24,28 +26,38 @@ const Paraph = (props: { title: string, content: string[], other: any }) => {
 const ContractPage = () => (
     <div className="flex flex-col gap-16 items-center h-fit">
         <PageTitle title="Hợp đồng" type={PageTitleUnderlineType.Type3} />
-        <iframe src="/files/contract/hop-dong-thanh-lap-nhom.pdf" className="w-full" height={800} />
+        <div className="w-full flex flex-col gap-4">
+            <Link href={"/files/contract/hop-dong-thanh-lap-nhom.pdf"} target="_blank">
+                <div className="flex flex-row gap-2 items-center">
+                    <FaFilePdf className="text-primary h-6 w-6" />
+                    <p className="underline">Hợp đồng thành lập nhóm</p>
+                </div>
+            </Link>
+            <iframe src="/files/contract/hop-dong-thanh-lap-nhom.pdf" className="w-full opacity-0 h-0 lg:opacity-100 lg:h-[800px]" height={800} />
+        </div>
+
+
         <div className="flex flex-col gap-8">
             <Paraph
                 title={"1. Các nguyên tắc làm việc nhóm"}
                 content={[
-                    "Họp nhóm đúng giờ. Nếu có việc đột xuất cần báo trước giờ họp. Mỗi người có tối đa 10 phút để tham gia vào cuộc họp. Nếu sau khoảng thời gian ấy vẫn không có mặt, nhóm vẫn sẽ bắt đầu họp. Vắng họp cần lý do chính đáng.",
-                    "Hoàn thành deadline đúng hạn. Nếu có sự cố nào đó thì phải báo. Thời gian tăng thêm sẽ tùy vào tiến độ hoàn thành công việc hiện tại của nhóm cũng như độ nghiêm trọng của vấn đề.",
-                    "Tự do chia sẻ ý kiến, quan điểm của cá nhân. Khuyến khích phát biểu những điểm chưa hài lòng về nhóm để nhóm cùng nhau sửa đổi.",
-                    "Nếu có ý kiến trái chiều sẽ biểu quyết bằng bỏ phiếu."
+                    <p key={0} className="text-black">Họp nhóm đúng giờ. Nếu có việc đột xuất cần báo trước giờ họp. Mỗi người có tối đa 10 phút để tham gia vào cuộc họp. Nếu sau khoảng thời gian ấy vẫn không có mặt, nhóm vẫn sẽ bắt đầu họp. Vắng họp cần lý do chính đáng.</p>,
+                    <p key={1} className="text-black">Hoàn thành deadline đúng hạn. Nếu có sự cố nào đó thì phải báo. Thời gian tăng thêm sẽ tùy vào tiến độ hoàn thành công việc hiện tại của nhóm cũng như độ nghiêm trọng của vấn đề.</p>,
+                    <p key={2} className="text-black">Tự do chia sẻ ý kiến, quan điểm của cá nhân. Khuyến khích phát biểu những điểm chưa hài lòng về nhóm để nhóm cùng nhau sửa đổi.</p>,
+                    <p key={3} className="text-black">Nếu có ý kiến trái chiều sẽ biểu quyết bằng bỏ phiếu.</p>
                 ]}
                 other={null} />
             <Paraph
                 title={"2. Kế hoạch giao tiếp nhóm"}
                 content={[
-                    "Liên lạc thông qua Messenger.",
+                    <p key={0} className="text-black ml-4">Liên lạc thông qua <span className="text-primary" >Messenger</span>.</p>,
                 ]}
                 other={null} />
             <Paraph
                 title={"3. Kế hoạch họp nhóm"}
                 content={[
-                    "Lịch họp cố định đánh giá tiến độ làm việc của nhóm: Online trên Google Meet 21h thứ 7 hàng tuần.",
-                    "Ngoài ra sẽ có các buổi họp khác, sẽ được thông báo trên Messenger trước thời gian và địa điểm tối thiểu là 2 ngày."
+                    <p key={0} className="text-black">Lịch họp cố định đánh giá tiến độ làm việc của nhóm: Online trên <span className="text-primary"> Google Meet 21h thứ 7 hàng tuần</span>.</p>,
+                    <p key={1} className="text-black">Ngoài ra sẽ có các buổi họp khác, sẽ được thông báo trên Messenger trước thời gian và địa điểm tối thiểu là 2 ngày.</p>
                 ]}
                 other={null} />
             <div className="self-stretch flex flex-col gap-4">
@@ -56,8 +68,8 @@ const ContractPage = () => (
                     4.1 Các quy tắc thưởng
                 </h3>
                 <ul>
-                    <li className="list-item list-disc ml-16 text-primary"><p className="text-black">Giúp đỡ thành viên khác hoàn thành công việc thì sẽ được cộng 1 điểm.</p></li>
-                    <li className="list-item list-disc ml-16 text-primary"><p className="text-black">Góp ý, đưa ý kiến tốt thì sẽ được cộng 1 điểm.</p></li>
+                    <li className="list-item list-disc ml-16 text-primary"><p className="text-black">Giúp đỡ thành viên khác hoàn thành công việc thì sẽ được <span className="text-primary">cộng 1 điểm</span>.</p></li>
+                    <li className="list-item list-disc ml-16 text-primary"><p className="text-black">Góp ý, đưa ý kiến tốt thì sẽ được <span className="text-primary">cộng 1 điểm</span>.</p></li>
                     <li className="list-item list-disc ml-16 text-primary"><p className="text-black">Thành viên có số điểm cộng cao nhất trong tuần sẽ nhận quỹ thưởng đồ ăn từ
                         nhóm trưởng (nếu quỹ còn).</p></li>
                 </ul>
@@ -65,26 +77,26 @@ const ContractPage = () => (
                     4.2 Các quy tắc phạt
                 </h3>
                 <ul>
-                    <li className="list-item list-disc ml-16 text-primary"><p className="text-black">Trễ họp quá 20 phút thì sẽ đóng 10,000 VND vào quỹ và bị trừ 1 điểm trừ.</p></li>
+                    <li className="list-item list-disc ml-16 text-primary"><p className="text-black">Trễ họp quá 20 phút thì sẽ đóng <span className="text-primary">10,000 VND</span> vào quỹ và bị <span className="text-primary">trừ 1 điểm trừ</span>.</p></li>
                     <li className="list-item list-disc ml-16 text-primary"><p className="text-black">Công việc được giao hoàn thành không đúng hạn hoặc là làm không nghiêm
-                        túc thì sẽ bị phạt 5 điểm trừ.</p></li>
-                    <li className="list-item list-disc ml-16 text-primary"><p className="text-black">Nghỉ họp không báo trước thì sẽ đóng 20,000 VND vào quỹ và bị trừ 2 điểm.</p></li>
-                    <li className="list-item list-disc ml-16 text-primary"><p className="text-black">Nếu điểm trừ vượt quá 20 điểm sẽ bị đuổi khỏi nhóm.</p></li>
+                        túc thì sẽ bị <span className="text-primary">phạt 5 điểm trừ</span>.</p></li>
+                    <li className="list-item list-disc ml-16 text-primary"><p className="text-black">Nghỉ họp không báo trước thì sẽ đóng 20,000 VND vào quỹ và bị <span className="text-primary">trừ 2 điểm</span>.</p></li>
+                    <li className="list-item list-disc ml-16 text-primary"><p className="text-black">Nếu điểm <span className="text-primary font-bold">trừ vượt quá 20 điểm sẽ bị đuổi khỏi nhóm</span>.</p></li>
                 </ul>
             </div>
             <Paraph
                 title={"5. Tiêu chí đánh giá thành viên"}
                 content={[
-                    "Ở buổi học cuối, các thành viên sẽ đánh giá lẫn nhau dựa trên thang điểm từ 0 – 10 kèm theo lý do vì sao đánh giá như vậy.",
-                    "Các mức đánh giá"
+                    <p key={0} className="text-black">Ở buổi học cuối, các thành viên sẽ đánh giá lẫn nhau dựa trên thang điểm từ 0 – 10 kèm theo lý do vì sao đánh giá như vậy.</p>,
+                    <p key={1} className="text-black">Các mức đánh giá</p>
                 ]}
                 other={<Table>
                     <TableHeader>
                         <TableRow className="bg-primary text-white border-none">
                             <TableHead className="text-center font-bold"></TableHead>
-                            <TableHead className="text-center font-bold">9-10</TableHead>
-                            <TableHead className="text-center font-bold">7-8</TableHead>
-                            <TableHead className="text-center font-bold">5-6</TableHead>
+                            <TableHead className="text-center font-bold">10-9</TableHead>
+                            <TableHead className="text-center font-bold">9-7</TableHead>
+                            <TableHead className="text-center font-bold">7-5</TableHead>
                             <TableHead className="text-center font-bold">&lt;5 </TableHead>
                         </TableRow>
                     </TableHeader>
@@ -122,7 +134,7 @@ const ContractPage = () => (
         </div>
 
 
-    </div>
+    </div >
 )
 
 export default ContractPage;

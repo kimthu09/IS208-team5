@@ -80,4 +80,40 @@ export const documentItems: DocumentItem[] = [
     bienBanPdfPath: "/files/documents/3/bien-ban.pdf",
     phanCongPdfPath: "/files/documents/3/phan-cong.pdf"
   }
-] 
+]
+
+export type TeamMemberInfo = {
+  avaUrl: string;
+  avaDes: string;
+  name: string;
+  studentCode: string;
+  githubUrl: string;
+  mainJob: string
+};
+
+export const teamMemberInfos: TeamMemberInfo[] = [
+  {
+    avaUrl: "/images/ava/Mai.png",
+    avaDes: "NM",
+    name: "Nguyễn Lê Ngọc Mai",
+    studentCode: "21520339",
+    githubUrl: "https://github.com/NLNM-0-0",
+    mainJob: "Backend Developer",
+  },
+  {
+    avaUrl: "/images/ava/Thu.png",
+    avaDes: "AT",
+    name: "Nguyễn Kim Anh Thư",
+    studentCode: "21521495",
+    githubUrl: "https://github.com/kimthu09",
+    mainJob: "Full-stack Developer",
+  },
+  {
+    avaUrl: "/images/ava/Tri.png",
+    avaDes: "MT",
+    name: "Nguyễn Minh Trí",
+    studentCode: "21520495",
+    githubUrl: "https://github.com/Karin1412",
+    mainJob: "Frontend Developer",
+  }
+]
