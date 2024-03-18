@@ -95,7 +95,7 @@ const GroupIntroduction = () => {
                         </div>
                     </div>
                     <div className="flex-1 text-xl">
-                        <p>Nhóm chúng mình gồm có 3 thành viên đều đến từ khoa CNPM.</p>
+                        <p className="mb-4">Nhóm chúng mình gồm có 3 thành viên đều đến từ khoa CNPM.</p>
                         <p>
                             Với tinh thần hợp tác và sự nhiệt huyết đầy cháy bỏng, chúng mình tin rằng mỗi thử thách sẽ trở thành cơ hội để chúng mình mạnh mẽ hơn. Bằng cách làm việc cùng nhau và chia sẻ kiến thức, chúng mình cam kết sẽ hỗ trợ lẫn nhau và cùng nhau phát triển bản thân cũng như hoàn thành môn học một cách xuất sắc.
                         </p>
