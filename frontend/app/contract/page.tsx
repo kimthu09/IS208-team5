@@ -33,7 +33,7 @@ const ContractPage = () => (
                     <p className="underline">Hợp đồng thành lập nhóm</p>
                 </div>
             </Link>
-            <iframe src="/files/contract/hop-dong-thanh-lap-nhom.pdf" className="w-full opacity-0 h-0 lg:opacity-100 lg:h-[800px]" height={800} />
+            <iframe src="/files/contract/hop-dong-thanh-lap-nhom.pdf" className="w-full opacity-0 h-0 md:opacity-100 md:h-[800px]" height={800} />
         </div>
 
 
