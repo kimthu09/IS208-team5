@@ -49,7 +49,7 @@ const ProjectPage = () => {
           </div>
         </div>
       </RevealOnScroll>
-      <RevealOnScroll>
+      <RevealOnScroll className="w-full">
         <div className="flex gap-8 md:flex-row flex-col self-start w-full">
           <div className="lg:basis-3/5 flex-1 flex flex-col gap-8">
             <h2 className="text-2xl capitalize text-primary border-l-[6px] pl-2 py-2 border-primary">
