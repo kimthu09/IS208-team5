@@ -43,7 +43,7 @@ const GroupIntroduction = () => {
             setIsAnimation2(true);
             setTimeout(() => {
                 setIsAnimation2(false);
-            }, 200);
+            }, 400);
         }, 200);
 
         return () => clearInterval(autoplay);
@@ -57,8 +57,8 @@ const GroupIntroduction = () => {
                     <h2 className="text-center text-4xl text-primary leading-[52px]">Chào các bạn,<br />Chúng mình là nhom5</h2>
                     <hr className="h-1 flex-1 bg-primary rounded border-none" />
                 </div>
-                <div className="flex flex-col-reverse gap-8 lg:flex-row lg:gap-2">
-                    <div className="flex flex-row gap-2">
+                <div className="flex flex-col-reverse gap-8 items-center lg:items-start lg:flex-row lg:gap-2">
+                    <div className="flex flex-row gap-2 w-fit">
                         <div className="flex flex-col gap-3 items-stretch cursor-pointer" >
                             <div className="relative flex flex-row gap-2 items-center" onClick={() => changeIndex(0)}>
                                 <p className={`transition-all duration-300 font-bold flex-1 text-${currentIndex == 0 ? 'primary' : '[#A6A6A655]'} text-${currentIndex == 0 ? 'scale-125' : 'scale-100'}`}>{1}</p>
@@ -76,10 +76,12 @@ const GroupIntroduction = () => {
                                 <div className={`transition-all duration-300 absolute right-0 w-[2px] h-${currentIndex == 2 ? '[88px]' : 0} bg-primary rounded`} ></div>
                             </div>
                         </div>
-                        <div className="relative w-[600px]">
-                            <Image className="transition-all duration-1000" src={teamMemberInfos[currentIndex].avaUrl} alt={"ava"} width={288} height={288} />
+                        <div className="relative md:w-[600px]">
+                            <Image className={`transition-all duration-1000 ${currentIndex == 0 ? "block" : "hidden"}`} src={teamMemberInfos[0].avaUrl} alt={"ava"} width={288} height={288} />
+                            <Image className={`transition-all duration-1000 ${currentIndex == 1 ? "block" : "hidden"}`} src={teamMemberInfos[1].avaUrl} alt={"ava"} width={288} height={288} />
+                            <Image className={`transition-all duration-1000 ${currentIndex == 2 ? "block" : "hidden"}`} src={teamMemberInfos[2].avaUrl} alt={"ava"} width={288} height={288} />
                             <div className={`w-${isAnimation1 ? 72 : 0} h-72 bg-white absolute top-0 left-${isAnimation2 ? 72 : 0} transition-all duration-100 ease-in-out`} />
-                            <div className={`text-xl p-2 bg-[#A6A6A611] absolute left-[272px] w-fit top-16 inline-block transition-transform ease-in-out 
+                            <div className={`text-xl p-2 bg-[#A6A6A611] block mt-2 w-[288px] md:w-fit md:mt-0 md:absolute  md:left-[272px]  md:top-16 md:inline-block transition-transform ease-in-out 
         ${isAnimation1 ? "opacity-0 translate-y-10" : "opacity-100 translate-y-0"}
                         }`}>
                                 <div className="flex flex-row gap-2 items-start text-primary">
