@@ -17,14 +17,14 @@ const DocumentsPage = () => {
                     <h2 className="text-2xl capitalize text-primary border-l-[6px] pl-2 py-2 border-primary self-start">
                         Biên bản
                     </h2>
-                    <Accordion type="multiple" className="w-full hidden lg:block">
+                    <Accordion type="multiple" className="w-full hidden md:block">
                         {
                             bienbanItems.map((item, index) => {
                                 return (
                                     <AccordionItem key={index} value={`item-${index}`}>
                                         <AccordionTrigger className="text-xl backdrop-blur-sm bg-white/50 px-4 rounded">{item.title}</AccordionTrigger>
                                         <AccordionContent>
-                                            <div className="gap-8 lg:gap-0 mb-8 mt-4">
+                                            <div className="gap-8 md:gap-0 mb-8 mt-4">
                                                 <div className="w-full flex flex-col gap-4 flex-1 items-center">
                                                     <Link href={item.pdfPath} target="_blank" className="self-start">
                                                         <div className="flex flex-row gap-2">
@@ -42,7 +42,7 @@ const DocumentsPage = () => {
                             })
                         }
                     </Accordion>
-                    <div className="flex flex-col gap-4 lg:hidden">
+                    <div className="flex flex-col gap-4 md:hidden">
                         {
                             bienbanItems.map((item, index) => {
                                 return (
@@ -63,14 +63,14 @@ const DocumentsPage = () => {
                     <h2 className="text-2xl capitalize text-primary border-l-[6px] pl-2 py-2 border-primary self-start">
                         Phân công
                     </h2>
-                    <Accordion type="multiple" className="w-full hidden lg:block">
+                    <Accordion type="multiple" className="w-full hidden md:block">
                         {
                             phancongItems.map((item, index) => {
                                 return (
                                     <AccordionItem key={index} value={`item-${index}`}>
                                         <AccordionTrigger className="text-xl backdrop-blur-sm bg-white/50 px-4 rounded">{item.title}</AccordionTrigger>
                                         <AccordionContent>
-                                            <div className="gap-8 lg:gap-0 mb-8 mt-4">
+                                            <div className="gap-8 md:gap-0 mb-8 mt-4">
                                                 <div className="w-full flex flex-col gap-4 flex-1 items-center">
                                                     <Link href={item.pdfPath} target="_blank" className="self-start">
                                                         <div className="flex flex-row gap-2">
@@ -88,7 +88,7 @@ const DocumentsPage = () => {
                             })
                         }
                     </Accordion>
-                    <div className="flex flex-col gap-4 lg:hidden">
+                    <div className="flex flex-col gap-4 md:hidden">
                         {
                             phancongItems.map((item, index) => {
                                 return (
