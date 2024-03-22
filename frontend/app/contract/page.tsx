@@ -80,7 +80,7 @@ const ContractPage = () => (
                     <li className="list-item list-disc ml-16 text-primary"><p className="text-black">Trễ họp quá 20 phút thì sẽ đóng <span className="text-primary">10,000 VND</span> vào quỹ và bị <span className="text-primary">trừ 1 điểm trừ</span>.</p></li>
                     <li className="list-item list-disc ml-16 text-primary"><p className="text-black">Công việc được giao hoàn thành không đúng hạn hoặc là làm không nghiêm
                         túc thì sẽ bị <span className="text-primary">phạt 5 điểm trừ</span>.</p></li>
-                    <li className="list-item list-disc ml-16 text-primary"><p className="text-black">Nghỉ họp không báo trước thì sẽ đóng 20,000 VND vào quỹ và bị <span className="text-primary">trừ 2 điểm</span>.</p></li>
+                    <li className="list-item list-disc ml-16 text-primary"><p className="text-black">Nghỉ họp không báo trước thì sẽ đóng <span className="text-primary">20,000 VND</span> vào quỹ và bị <span className="text-primary">trừ 2 điểm</span>.</p></li>
                     <li className="list-item list-disc ml-16 text-primary"><p className="text-black">Nếu điểm <span className="text-primary font-bold">trừ vượt quá 20 điểm sẽ bị đuổi khỏi nhóm</span>.</p></li>
                 </ul>
             </div>
