@@ -67,17 +67,31 @@ export const bienbanItems: DocumentItem[] = [
   {
     title: "Biên bản cuộc họp lần 1",
     pdfPath: "/files/documents/bien-ban/nhom5-bienbanhoplan1.pdf",
-  },
-  {
-    title: "Biên bản cuộc họp lần 2",
-    pdfPath: "/files/documents/bien-ban/nhom5-bienbanhoplan2.pdf",
-  },
+  }
 ]
 
 export const phancongItems: DocumentItem[] = [
   {
-    title: "Phân công công việc lần 1",
-    pdfPath: "/files/documents/phan-cong/nhom5-phanconglan1.pdf",
+    title: "Phân công công việc ban đầu",
+    pdfPath: "/files/documents/phan-cong/nhom5-phancongbandau.pdf",
+  }
+]
+
+export const sprintReviewItems: DocumentItem[] = [
+  {
+    title: "Sprint Review Sprint 0",
+    pdfPath: "/files/documents/sprint-review/nhom5-sprintreview0.pdf",
+  }
+]
+
+export const sprintPlanningItems: DocumentItem[] = [
+  {
+    title: "Sprint Planning Sprint 0",
+    pdfPath: "/files/documents/sprint-planning/nhom5-sprintplanning0.pdf",
+  },
+  {
+    title: "Sprint Planning Sprint 1",
+    pdfPath: "/files/documents/sprint-planning/nhom5-sprintplanning1.pdf",
   }
 ]
 
