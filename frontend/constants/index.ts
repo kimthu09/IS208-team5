@@ -55,7 +55,7 @@ export const toolItems: ToolItem[] = [
 export enum PageTitleUnderlineType {
   Type1 = 1,
   Type2 = 2,
-  Type3 = 3
+  Type3 = 3,
 }
 
 export interface DocumentItem {
@@ -67,33 +67,61 @@ export const bienbanItems: DocumentItem[] = [
   {
     title: "Biên bản cuộc họp lần 1",
     pdfPath: "/files/documents/bien-ban/nhom5-bienbanhoplan1.pdf",
-  }
-]
+  },
+  {
+    title: "Biên bản cuộc họp lần 2",
+    pdfPath: "/files/documents/bien-ban/nhom5-bienbanhoplan2.pdf",
+  },
+  {
+    title: "Biên bản cuộc họp lần 3",
+    pdfPath: "/files/documents/bien-ban/nhom5-bienbanhoplan3.pdf",
+  },
+];
 
 export const phancongItems: DocumentItem[] = [
   {
-    title: "Phân công công việc ban đầu",
+    title: "Phân công thành viên ban đầu",
     pdfPath: "/files/documents/phan-cong/nhom5-phancongbandau.pdf",
-  }
-]
+  },
+  {
+    title: "Phân công công việc lần 1",
+    pdfPath: "/files/documents/phan-cong/nhom5-phanconglan1.pdf",
+  },
+  {
+    title: "Phân công công việc lần 2",
+    pdfPath: "/files/documents/phan-cong/nhom5-phanconglan2.pdf",
+  },
+];
 
 export const sprintReviewItems: DocumentItem[] = [
   {
-    title: "Sprint Review Sprint 0",
-    pdfPath: "/files/documents/sprint-review/nhom5-sprintreview0.pdf",
-  }
-]
+    title: "Sprint Review Sprint 1",
+    pdfPath: "/files/documents/sprint-review/nhom5-sprintreview1.pdf",
+  },
+  {
+    title: "Sprint Review Sprint 2",
+    pdfPath: "/files/documents/sprint-review/nhom5-sprintreview2.pdf",
+  },
+  {
+    title: "Sprint Review Sprint 3",
+    pdfPath: "/files/documents/sprint-review/nhom5-sprintreview3.pdf",
+  },
+];
 
 export const sprintPlanningItems: DocumentItem[] = [
   {
-    title: "Sprint Planning Sprint 0",
-    pdfPath: "/files/documents/sprint-planning/nhom5-sprintplanning0.pdf",
-  },
-  {
     title: "Sprint Planning Sprint 1",
     pdfPath: "/files/documents/sprint-planning/nhom5-sprintplanning1.pdf",
-  }
-]
+  },
+  {
+    title: "Sprint Planning Sprint 2",
+    pdfPath: "/files/documents/sprint-planning/nhom5-sprintplanning2.pdf",
+  },
+  {
+    title: "Sprint Planning Sprint 3",
+    pdfPath: "/files/documents/sprint-planning/nhom5-sprintplanning3.pdf",
+  },
+];
 
 export type TeamMemberInfo = {
   avaUrl: string;
@@ -101,7 +129,7 @@ export type TeamMemberInfo = {
   name: string;
   studentCode: string;
   githubUrl: string;
-  mainJob: string
+  mainJob: string;
 };
 
 export const teamMemberInfos: TeamMemberInfo[] = [
@@ -128,5 +156,5 @@ export const teamMemberInfos: TeamMemberInfo[] = [
     studentCode: "21520495",
     githubUrl: "https://github.com/Karin1412",
     mainJob: "Frontend Developer",
-  }
-]
+  },
+];
