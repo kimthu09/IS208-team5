@@ -1,7 +1,14 @@
+"use client";
+
 import PageTitle from "@/components/page-title/page-title";
 import RevealOnScroll from "@/components/reveal-on-scroll";
 import { PageTitleUnderlineType } from "@/constants";
-import { CheckCircle, CheckCircleIcon, CheckSquare, CircleCheck, CircleCheckIcon, CircleDashed } from "lucide-react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import Image from "next/image";
 import Link from "next/link";
 import { PiNavigationArrowFill } from "react-icons/pi";
@@ -11,7 +18,7 @@ const ProjectPage = () => {
     <div className="flex flex-col gap-16 items-center">
       <PageTitle title="Đồ án" type={PageTitleUnderlineType.Type2} />
       <RevealOnScroll>
-        <div className="flex gap-8 md:flex-row flex-col self-start items-center">
+        <div className="flex gap-8 md:flex-row flex-col self-start">
           <div className="basis-2/5 px-16 lg:block hidden">
             <Link href="https://storyset.com/people" target="_blank">
               <Image
@@ -29,14 +36,16 @@ const ProjectPage = () => {
               Đề tài
             </h2>
             <p className="text-lg font-medium">
-              Giải pháp phần mềm mục đích cung cấp một nền tảng truy cập thông tin
-              nội bộ, quản lý biểu mẫu và tài liệu, cũng như số hóa quy trình xử
-              lý công việc hành chính nội bộ của công ty. Bao gồm các chức năng:
+              Giải pháp phần mềm mục đích cung cấp một nền tảng truy cập thông
+              tin nội bộ, quản lý biểu mẫu và tài liệu, cũng như số hóa quy
+              trình xử lý công việc hành chính nội bộ của công ty. Bao gồm các
+              chức năng:
             </p>
             <div className="flex flex-row gap-5">
               <PiNavigationArrowFill className="text-primary h-6 w-6 inline-block rotate-[135deg]" />
               <p className="flex-1">
-                Bảng tin nội bộ, thông báo nội bộ, các vấn đề truyền thông nội bộ.
+                Bảng tin nội bộ, thông báo nội bộ, các vấn đề truyền thông nội
+                bộ.
               </p>
             </div>
             <div className="flex flex-row gap-5">
@@ -53,791 +62,762 @@ const ProjectPage = () => {
       <RevealOnScroll className="w-full">
         <div className="flex gap-8 flex-col w-full">
           <h2 className="text-2xl capitalize text-primary border-l-[6px] pl-2 py-2 border-primary">
-            Sản phẩm (Cập nhật lần cuối 5/5/2024)
+            Sản phẩm
           </h2>
         </div>
       </RevealOnScroll>
       <RevealOnScroll className="w-full">
         <div className="flex flex-col gap-4">
           <h3 className="text-xl font-bold capitalize text-primary border-b-[2px] border-primary w-fit">
-            API Document
+            Giới thiệu
           </h3>
           <div className="flex gap-4 md:flex-row flex-col self-start w-full">
-            <div className="flex flex-col gap-4 lg:basis-1/3 flex-1">
+            <div className="flex gap-4 basis-1/4 flex-col self-start w-full">
               <div className="flex flex-row gap-5">
                 <PiNavigationArrowFill className="text-primary h-6 w-6 inline-block rotate-[135deg]" />
                 <p className="flex-1">
-                  Sử dụng swagger.
+                  Source code:{" "}
+                  <Link
+                    href="https://github.com/kimthu09/company-internal-web"
+                    target="_blank"
+                    className="text-primary underline underline-offset-2"
+                  >
+                    github
+                  </Link>
                 </p>
               </div>
               <div className="flex flex-row gap-5">
                 <PiNavigationArrowFill className="text-primary h-6 w-6 inline-block rotate-[135deg]" />
                 <p className="flex-1">
-                  chạy <span className="font-bold">Backend</span> và truy cập <Link href="http://localhost:8080/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config#/" target="_blank" className="text-primary underline">swagger</Link> để sử dụng.
+                  Backend API:{" "}
+                  <Link
+                    href="https://ciw-be.onrender.com/swagger-ui/index.html"
+                    target="_blank"
+                    className="text-primary underline underline-offset-2"
+                  >
+                    swagger
+                  </Link>
+                </p>
+              </div>
+              <div className="flex flex-row gap-5">
+                <PiNavigationArrowFill className="text-primary h-6 w-6 inline-block rotate-[135deg]" />
+                <p className="flex-1">
+                  Frontend:{" "}
+                  <Link
+                    href="https://company-internal-web.vercel.app/"
+                    target="_blank"
+                    className="text-primary underline underline-offset-2"
+                  >
+                    companion
+                  </Link>
+                </p>
+              </div>
+              <div className="flex flex-row gap-5">
+                <PiNavigationArrowFill className="text-primary h-6 w-6 inline-block rotate-[135deg]" />
+                <p className="flex-1">
+                  <span className="font-bold text-primary">Note: </span>
+                  Để chạy được ở local xin hãy đọc{" "}
+                  <Link
+                    href="https://github.com/kimthu09/company-internal-web?tab=readme-ov-file#h%C6%B0%E1%BB%9Bng-d%E1%BA%ABn-c%C3%A0i-%C4%91%E1%BA%B7t-v%C3%A0-ch%E1%BA%A1y-%E1%BB%A9ng-d%E1%BB%A5ng-%E1%BB%9F-local"
+                    target="_blank"
+                    className="text-primary underline underline-offset-2  "
+                  >
+                    hướng dẫn sau
+                  </Link>
                 </p>
               </div>
             </div>
-            <div className="basis-2/3 px-16 lg:flex hidden">
+            <div className="basis-3/4 px-16 lg:flex hidden">
               <Image
                 className={`object-cover w-full h-auto`}
-                src="/images/project/swagger.png"
+                src="/images/project/home.png"
                 priority
-                width={1472}
-                height={907}
-                alt="Project Management"
+                width={1918}
+                height={911}
+                alt="Home page"
               ></Image>
             </div>
           </div>
         </div>
       </RevealOnScroll>
       <RevealOnScroll className="w-full">
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 w-full">
           <h3 className="text-xl font-bold capitalize text-primary border-b-[2px] border-primary w-fit">
-            Đăng nhập
+            Các tính năng chính
           </h3>
-          <div className="flex gap-4 md:flex-row flex-col self-start w-full">
-            <div className="flex flex-col gap-4 lg:basis-1/3 flex-1">
-              <div className="flex flex-row gap-5">
-                <PiNavigationArrowFill className="text-primary h-6 w-6 inline-block rotate-[135deg]" />
-                <p className="flex-1">
-                  Link video: <Link href="/video/login.mp4" target="_blank" className="text-primary underline">đăng nhập</Link>
-                </p>
-              </div>
-              <div className="flex flex-row gap-5">
-                <PiNavigationArrowFill className="text-primary h-6 w-6 inline-block rotate-[135deg]" />
-                <p className="flex-1">
-                  Người dùng sử dụng email và mật khẩu để đăng nhập.
-                </p>
-              </div>
-              <div className="flex flex-col gap-4">
-                <div className="flex flex-row gap-5">
-                  <PiNavigationArrowFill className="text-primary h-6 w-6 inline-block rotate-[135deg]" />
-                  <p className="flex-1">
-                    Tài khoản admin:
+          <Accordion type="multiple" className="w-full">
+            <AccordionItem value={`item-authentication`} className="mb-2">
+              <AccordionTrigger className="text-base backdrop-blur-sm bg-white/50 px-4 py-2 rounded">
+                {"Authentication"}
+              </AccordionTrigger>
+              <AccordionContent>
+                <div className="flex flex-col gap-2 mt-4">
+                  <div className="flex flex-row gap-2 items-center">
+                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
+                    <p className="flex-1">Đăng nhập</p>
+                  </div>
+                  <Image
+                    className={`object-contain md:w-1/2 h-auto self-center`}
+                    src="/images/project/final/login.png"
+                    priority
+                    width={1418}
+                    height={903}
+                    alt="login"
+                  ></Image>
+                  <div className="flex flex-row gap-2 items-center">
+                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
+                    <p className="flex-1">Quên mật khẩu</p>
+                  </div>
+                  <Image
+                    className={`object-contain md:w-1/2 h-auto self-center`}
+                    src="/images/project/final/reset-password.png"
+                    priority
+                    width={1418}
+                    height={903}
+                    alt="reset-password"
+                  ></Image>
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value={`item-post`} className="mb-2">
+              <AccordionTrigger className="text-base backdrop-blur-sm bg-white/50 px-4 py-2 rounded">
+                {"Bảng tin"}
+              </AccordionTrigger>
+              <AccordionContent>
+                <div className="flex flex-col gap-2 mt-4">
+                  <div className="flex flex-row gap-2 items-center">
+                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
+                    <p className="flex-1">Lọc bảng tin</p>
+                  </div>
+                  <Image
+                    className={`object-contain md:w-1/2 h-auto self-center`}
+                    src="/images/project/final/post-filter.png"
+                    priority
+                    width={1418}
+                    height={903}
+                    alt="post-filter"
+                  ></Image>
+                  <div className="flex flex-row gap-2 items-center">
+                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
+                    <p className="flex-1">Xem chi tiết bảng tin</p>
+                  </div>
+                  <Image
+                    className={`object-contain md:w-1/2 h-auto self-center`}
+                    src="/images/project/final/post-detail.png"
+                    priority
+                    width={1418}
+                    height={903}
+                    alt="post-detail"
+                  ></Image>
+                  <div className="flex flex-row gap-2 items-center">
+                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
+                    <p className="flex-1">Tạo bảng tin mới</p>
+                  </div>
+                  <Image
+                    className={`object-contain md:w-1/2 h-auto self-center`}
+                    src="/images/project/final/post-create.png"
+                    priority
+                    width={1418}
+                    height={903}
+                    alt="post-create"
+                  ></Image>
+                  <div className="flex flex-row gap-2 items-center">
+                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
+                    <p className="flex-1">Chỉnh sửa bảng tin</p>
+                  </div>
+                  <Image
+                    className={`object-contain md:w-1/2 h-auto self-center`}
+                    src="/images/project/final/post-update.png"
+                    priority
+                    width={1418}
+                    height={903}
+                    alt="post-update"
+                  ></Image>
+                  <div className="flex flex-row gap-2 items-center">
+                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
+                    <p className="flex-1">Xóa bảng tin</p>
+                  </div>
+                  <Image
+                    className={`object-contain md:w-1/2 h-auto self-center`}
+                    src="/images/project/final/post-delete.png"
+                    priority
+                    width={1418}
+                    height={903}
+                    alt="post-delete"
+                  ></Image>
+                  <div className="flex flex-row gap-2 items-center">
+                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
+                    <p className="flex-1">
+                      Tự động đăng bài chúc mừng sinh nhật theo tháng.
+                    </p>
+                  </div>
+                  <Image
+                    className={`object-contain md:w-1/2 h-auto self-center`}
+                    src="/images/project/final/post-birthday.png"
+                    priority
+                    width={1418}
+                    height={903}
+                    alt="post-birthday"
+                  ></Image>
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value={`item-staff`} className="mb-2">
+              <AccordionTrigger className="text-base backdrop-blur-sm bg-white/50 px-4 py-2 rounded">
+                Nhân viên
+              </AccordionTrigger>
+              <AccordionContent>
+                <div className="flex flex-col gap-2 mt-4">
+                  <div className="flex flex-row gap-2 items-center">
+                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
+                    <p className="flex-1">Lọc nhân viên</p>
+                  </div>
+                  <Image
+                    className={`object-contain md:w-1/2 h-auto self-center`}
+                    src="/images/project/final/staff-filter.png"
+                    priority
+                    width={1418}
+                    height={903}
+                    alt="staff-filter"
+                  ></Image>
+                  <div className="flex flex-row gap-2 items-center">
+                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
+                    <p className="flex-1">Xem chi tiết nhân viên</p>
+                  </div>
+                  <Image
+                    className={`object-contain md:w-1/2 h-auto self-center`}
+                    src="/images/project/final/staff-detail.png"
+                    priority
+                    width={1418}
+                    height={903}
+                    alt="staff-detail"
+                  ></Image>
+                  <div className="flex flex-row gap-2 items-center">
+                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
+                    <p className="flex-1">Tạo nhân viên mới</p>
+                  </div>
+                  <Image
+                    className={`object-contain md:w-1/2 h-auto self-center`}
+                    src="/images/project/final/staff-detail.png"
+                    priority
+                    width={1418}
+                    height={903}
+                    alt="staff-create"
+                  ></Image>
+                  <div className="flex flex-row gap-2 items-center">
+                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
+                    <p className="flex-1">Chỉnh sửa nhân viên</p>
+                  </div>
+                  <Image
+                    className={`object-contain md:w-1/2 h-auto self-center`}
+                    src="/images/project/final/staff-edit.png"
+                    priority
+                    width={1418}
+                    height={903}
+                    alt="staff-edit"
+                  ></Image>
+                  <div className="flex flex-row gap-2 items-center">
+                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
+                    <p className="flex-1">Xóa nhân viên</p>
+                  </div>
+                  <Image
+                    className={`object-contain md:w-1/2 h-auto self-center`}
+                    src="/images/project/final/staff-delete.png"
+                    priority
+                    width={1418}
+                    height={903}
+                    alt="staff-delete"
+                  ></Image>
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value={`item-unit`} className="mb-2">
+              <AccordionTrigger className="text-base backdrop-blur-sm bg-white/50 px-4 py-2 rounded">
+                Phòng ban
+              </AccordionTrigger>
+              <AccordionContent>
+                <div className="flex flex-col gap-2 mt-4">
+                  <div className="flex flex-row gap-2 items-center">
+                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
+                    <p className="flex-1">Lọc phòng ban</p>
+                  </div>
+                  <Image
+                    className={`object-contain md:w-1/2 h-auto self-center`}
+                    src="/images/project/final/unit-filter.png"
+                    priority
+                    width={1418}
+                    height={903}
+                    alt="unit-filter"
+                  ></Image>
+                  <div className="flex flex-row gap-2 items-center">
+                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
+                    <p className="flex-1">Xem chi tiết phòng ban</p>
+                  </div>
+                  <Image
+                    className={`object-contain md:w-1/2 h-auto self-center`}
+                    src="/images/project/final/unit-detail.png"
+                    priority
+                    width={1418}
+                    height={903}
+                    alt="unit-detail"
+                  ></Image>
+                  <div className="flex flex-row gap-2 items-center">
+                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
+                    <p className="flex-1">Tạo phòng ban mới</p>
+                  </div>
+                  <Image
+                    className={`object-contain md:w-1/2 h-auto self-center`}
+                    src="/images/project/final/unit-create.png"
+                    priority
+                    width={1418}
+                    height={903}
+                    alt="unit-create"
+                  ></Image>
+                  <div className="flex flex-row gap-2 items-center">
+                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
+                    <p className="flex-1">Chỉnh sửa phòng ban</p>
+                  </div>
+                  <Image
+                    className={`object-contain md:w-1/2 h-auto self-center`}
+                    src="/images/project/final/unit-update.png"
+                    priority
+                    width={1418}
+                    height={903}
+                    alt="unit-update"
+                  ></Image>
+                  <div className="flex flex-row gap-2 items-center">
+                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
+                    <p className="flex-1">Xóa phòng ban</p>
+                  </div>
+                  <Image
+                    className={`object-contain md:w-1/2 h-auto self-center`}
+                    src="/images/project/final/unit-delete.png"
+                    priority
+                    width={1418}
+                    height={903}
+                    alt="unit-delete"
+                  ></Image>
+                  <p>
+                    <span className="text-primary"> Note: </span>
+                    Phân quyền sẽ được cài đặt ở phòng ban. Các nhân viên thuộc
+                    phòng ban đều có các quyền mà phòng ban có.
                   </p>
                 </div>
-                <p className="text-sm ml-12"><span className="font-bold">Email: </span>admin@gmail.com</p>
-                <p className="text-sm ml-12"><span className="font-bold">Password: </span>123456</p>
-              </div>
-
-            </div>
-            <div className="basis-2/3 px-16 lg:flex hidden">
-              <video width="1472" height="907" controls preload="none">
-                <source src="/video/login.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          </div>
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value={`item-meeting-room`} className="mb-2">
+              <AccordionTrigger className="text-base backdrop-blur-sm bg-white/50 px-4 py-2 rounded">
+                Phòng họp
+              </AccordionTrigger>
+              <AccordionContent>
+                <div className="flex flex-col gap-2 mt-4">
+                  <div className="flex flex-row gap-2 items-center">
+                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
+                    <p className="flex-1">Lọc phòng họp</p>
+                  </div>
+                  <Image
+                    className={`object-contain md:w-1/2 h-auto self-center`}
+                    src="/images/project/final/meeting-room-filter.png"
+                    priority
+                    width={1418}
+                    height={903}
+                    alt="meeting-room-filter"
+                  ></Image>
+                  <div className="flex flex-row gap-2 items-center">
+                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
+                    <p className="flex-1">Tạo phòng họp mới</p>
+                  </div>
+                  <Image
+                    className={`object-contain md:w-1/2 h-auto self-center`}
+                    src="/images/project/final/meeting-room-create.png"
+                    priority
+                    width={1418}
+                    height={903}
+                    alt="meeting-room-create"
+                  ></Image>
+                  <div className="flex flex-row gap-2 items-center">
+                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
+                    <p className="flex-1">Chỉnh sửa phòng họp</p>
+                  </div>
+                  <Image
+                    className={`object-contain md:w-1/2 h-auto self-center`}
+                    src="/images/project/final/meeting-room-edit.png"
+                    priority
+                    width={1418}
+                    height={903}
+                    alt="meeting-room-edit"
+                  ></Image>
+                  <div className="flex flex-row gap-2 items-center">
+                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
+                    <p className="flex-1">Xóa phòng họp</p>
+                  </div>
+                  <Image
+                    className={`object-contain md:w-1/2 h-auto self-center`}
+                    src="/images/project/final/meeting-room-delete.png"
+                    priority
+                    width={1418}
+                    height={903}
+                    alt="meeting-room-delete"
+                  ></Image>
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem
+              value={`item-meeting-room-calendar`}
+              className="mb-2"
+            >
+              <AccordionTrigger className="text-base backdrop-blur-sm bg-white/50 px-4 py-2 rounded">
+                Lịch phòng họp
+              </AccordionTrigger>
+              <AccordionContent>
+                <div className="flex flex-col gap-2 mt-4">
+                  <div className="flex flex-row gap-2 items-center">
+                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
+                    <p className="flex-1">Lọc lịch phòng họp</p>
+                  </div>
+                  <Image
+                    className={`object-contain md:w-1/2 h-auto self-center`}
+                    src="/images/project/final/meeting-room-calendar-filter.png"
+                    priority
+                    width={1418}
+                    height={903}
+                    alt="meeting-room-calendar-filter"
+                  ></Image>
+                  <div className="flex flex-row gap-2 items-center">
+                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
+                    <p className="flex-1">
+                      Đặt lịch phòng họp (Có gửi thông báo và email)
+                    </p>
+                  </div>
+                  <Image
+                    className={`object-contain md:w-1/2 h-auto self-center`}
+                    src="/images/project/final/meeting-room-calendar-book.png"
+                    priority
+                    width={1418}
+                    height={903}
+                    alt="meeting-room-calendar-book"
+                  ></Image>
+                  <div className="flex flex-row gap-2 items-center">
+                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
+                    <p className="flex-1">
+                      Xóa lịch phòng họp (Có gửi thông báo và email)
+                    </p>
+                  </div>
+                  <Image
+                    className={`object-contain md:w-1/2 h-auto self-center`}
+                    src="/images/project/final/meeting-room-calendar-delete.png"
+                    priority
+                    width={1418}
+                    height={903}
+                    alt="meeting-room-calendar-delete"
+                  ></Image>
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value={`item-resource`} className="mb-2">
+              <AccordionTrigger className="text-base backdrop-blur-sm bg-white/50 px-4 py-2 rounded">
+                Tài nguyên
+              </AccordionTrigger>
+              <AccordionContent>
+                <div className="flex flex-col gap-2 mt-4">
+                  <div className="flex flex-row gap-2 items-center">
+                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
+                    <p className="flex-1">Lọc tài nguyên</p>
+                  </div>
+                  <Image
+                    className={`object-contain md:w-1/2 h-auto self-center`}
+                    src="/images/project/final/resource-filter.png"
+                    priority
+                    width={1418}
+                    height={903}
+                    alt="resource-filter"
+                  ></Image>
+                  <div className="flex flex-row gap-2 items-center">
+                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
+                    <p className="flex-1">Tạo tài nguyên mới</p>
+                  </div>
+                  <Image
+                    className={`object-contain md:w-1/2 h-auto self-center`}
+                    src="/images/project/final/resource-create.png"
+                    priority
+                    width={1418}
+                    height={903}
+                    alt="resource-create"
+                  ></Image>
+                  <div className="flex flex-row gap-2 items-center">
+                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
+                    <p className="flex-1">Chỉnh sửa tài nguyên</p>
+                  </div>
+                  <Image
+                    className={`object-contain md:w-1/2 h-auto self-center`}
+                    src="/images/project/final/resource-edit.png"
+                    priority
+                    width={1418}
+                    height={903}
+                    alt="resource-edit"
+                  ></Image>
+                  <div className="flex flex-row gap-2 items-center">
+                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
+                    <p className="flex-1">Xóa tài nguyên</p>
+                  </div>
+                  <Image
+                    className={`object-contain md:w-1/2 h-auto self-center`}
+                    src="/images/project/final/resource-delete.png"
+                    priority
+                    width={1418}
+                    height={903}
+                    alt="resource-delete"
+                  ></Image>
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value={`item-resource-calendar`} className="mb-2">
+              <AccordionTrigger className="text-base backdrop-blur-sm bg-white/50 px-4 py-2 rounded">
+                Lịch tài nguyên
+              </AccordionTrigger>
+              <AccordionContent>
+                <div className="flex flex-col gap-2 mt-4">
+                  <div className="flex flex-row gap-2 items-center">
+                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
+                    <p className="flex-1">Lọc lịch tài nguyên</p>
+                  </div>
+                  <Image
+                    className={`object-contain md:w-1/2 h-auto self-center`}
+                    src="/images/project/final/meeting-room-calendar-filter.png"
+                    priority
+                    width={1418}
+                    height={903}
+                    alt="resource-calendar-filter"
+                  ></Image>
+                  <div className="flex flex-row gap-2 items-center">
+                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
+                    <p className="flex-1">
+                      Đặt lịch tài nguyên (Có gửi thông báo và email)
+                    </p>
+                  </div>
+                  <Image
+                    className={`object-contain md:w-1/2 h-auto self-center`}
+                    src="/images/project/final/meeting-room-calendar-book.png"
+                    priority
+                    width={1418}
+                    height={903}
+                    alt="resource-calendar-book"
+                  ></Image>
+                  <div className="flex flex-row gap-2 items-center">
+                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
+                    <p className="flex-1">
+                      Xóa lịch tài nguyên (Có gửi thông báo và email)
+                    </p>
+                  </div>
+                  <Image
+                    className={`object-contain md:w-1/2 h-auto self-center`}
+                    src="/images/project/final/meeting-room-calendar-delete.png"
+                    priority
+                    width={1418}
+                    height={903}
+                    alt="resource-calendar-delete"
+                  ></Image>
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value={`item-noti`} className="mb-2">
+              <AccordionTrigger className="text-base backdrop-blur-sm bg-white/50 px-4 py-2 rounded">
+                Thông báo
+              </AccordionTrigger>
+              <AccordionContent>
+                <div className="flex flex-col gap-2 mt-4">
+                  <div className="flex flex-row gap-2 items-center">
+                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
+                    <p className="flex-1">Lọc thông báo</p>
+                  </div>
+                  <Image
+                    className={`object-contain md:w-1/2 h-auto self-center`}
+                    src="/images/project/final/noti-filter.png"
+                    priority
+                    width={1418}
+                    height={903}
+                    alt="noti-filter"
+                  ></Image>
+                  <div className="flex flex-row gap-2 items-center">
+                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
+                    <p className="flex-1">
+                      Tạo thông báo (Có gửi thông báo và email)
+                    </p>
+                  </div>
+                  <Image
+                    className={`object-contain md:w-1/2 h-auto self-center`}
+                    src="/images/project/final/noti-create.png"
+                    priority
+                    width={1418}
+                    height={903}
+                    alt="noti-create"
+                  ></Image>
+                  <div className="flex flex-row gap-2 items-center">
+                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
+                    <p className="flex-1">Đánh dấu đã đọc thông báo</p>
+                  </div>
+                  <Image
+                    className={`object-contain md:w-1/2 h-auto self-center`}
+                    src="/images/project/final/noti-mark.png"
+                    priority
+                    width={1418}
+                    height={903}
+                    alt="noti-mark"
+                  ></Image>
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value={`item-profile`} className="mb-2">
+              <AccordionTrigger className="text-base backdrop-blur-sm bg-white/50 px-4 py-2 rounded">
+                Cá nhân
+              </AccordionTrigger>
+              <AccordionContent>
+                <div className="flex flex-col gap-2 mt-4">
+                  <div className="flex flex-row gap-2 items-center">
+                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
+                    <p className="flex-1">Đổi mật khẩu</p>
+                  </div>
+                  <Image
+                    className={`object-contain md:w-1/2 h-auto self-center`}
+                    src="/images/project/final/profile-password.png"
+                    priority
+                    width={1418}
+                    height={903}
+                    alt="profile-password"
+                  ></Image>
+                  <div className="flex flex-row gap-2 items-center">
+                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
+                    <p className="flex-1">Xem thông tin cá nhân</p>
+                  </div>
+                  <Image
+                    className={`object-contain md:w-1/2 h-auto self-center`}
+                    src="/images/project/final/profile-detail.png"
+                    priority
+                    width={1418}
+                    height={903}
+                    alt="profile-detail"
+                  ></Image>
+                  <div className="flex flex-row gap-2 items-center">
+                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
+                    <p className="flex-1">Chỉnh sửa thông tin cơ bản</p>
+                  </div>
+                  <Image
+                    className={`object-contain md:w-1/2 h-auto self-center`}
+                    src="/images/project/final/profile-update.png"
+                    priority
+                    width={1418}
+                    height={903}
+                    alt="profile-update"
+                  ></Image>
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value={`item-request-for-leave`} className="mb-2">
+              <AccordionTrigger className="text-base backdrop-blur-sm bg-white/50 px-4 py-2 rounded">
+                Xin nghỉ phép
+              </AccordionTrigger>
+              <AccordionContent>
+                <div className="flex flex-col gap-2 mt-4">
+                  <div className="flex flex-row gap-2 items-center">
+                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
+                    <p className="flex-1">Xem xin nghỉ phép của mình</p>
+                  </div>
+                  <Image
+                    className={`object-contain md:w-1/2 h-auto self-center`}
+                    src="/images/project/final/leave-personal.png"
+                    priority
+                    width={1418}
+                    height={903}
+                    alt="leave-personal"
+                  ></Image>
+                  <div className="flex flex-row gap-2 items-center">
+                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
+                    <p className="flex-1">Tạo đơn xin nghỉ phép</p>
+                  </div>
+                  <Image
+                    className={`object-contain md:w-1/2 h-auto self-center`}
+                    src="/images/project/final/leave-create.png"
+                    priority
+                    width={1418}
+                    height={903}
+                    alt="leave-create"
+                  ></Image>
+                  <div className="flex flex-row gap-2 items-center">
+                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
+                    <p className="flex-1">
+                      Xóa đơn xin nghỉ phép (Có gửi thông báo và email)
+                    </p>
+                  </div>
+                  <Image
+                    className={`object-contain md:w-1/2 h-auto self-center`}
+                    src="/images/project/final/leave-delete.png"
+                    priority
+                    width={1418}
+                    height={903}
+                    alt="leave-delete"
+                  ></Image>
+                  <div className="flex flex-row gap-2 items-center">
+                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
+                    <p className="flex-1">Lọc đơn xin nghỉ phép nhân viên</p>
+                  </div>
+                  <Image
+                    className={`object-contain md:w-1/2 h-auto self-center`}
+                    src="/images/project/final/leave-filter.png"
+                    priority
+                    width={1418}
+                    height={903}
+                    alt="leave-filter"
+                  ></Image>
+                  <div className="flex flex-row gap-2 items-center">
+                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
+                    <p className="flex-1">
+                      Duyệt đơn xin nghỉ phép (Có gửi thông báo và email)
+                    </p>
+                  </div>
+                  <Image
+                    className={`object-contain md:w-1/2 h-auto self-center`}
+                    src="/images/project/final/leave-approve.png"
+                    priority
+                    width={1418}
+                    height={903}
+                    alt="leave-approve"
+                  ></Image>
+                  <div className="flex flex-row gap-2 items-center">
+                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
+                    <p className="flex-1">
+                      Từ chối đơn xin nghỉ phép (Có gửi thông báo và email)
+                    </p>
+                  </div>
+                  <Image
+                    className={`object-contain md:w-1/2 h-auto self-center`}
+                    src="/images/project/final/leave-reject.png"
+                    priority
+                    width={1418}
+                    height={903}
+                    alt="leave-reject"
+                  ></Image>
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
         </div>
       </RevealOnScroll>
       <RevealOnScroll className="w-full">
         <div className="flex flex-col gap-4">
           <h3 className="text-xl font-bold capitalize text-primary border-b-[2px] border-primary w-fit">
-            Quên mật khẩu
+            Lịch sử các đợt cập nhật
           </h3>
-          <div className="flex gap-4 md:flex-row flex-col self-start w-full">
-            <div className="flex flex-col gap-4 lg:basis-1/3 flex-1">
-              <div className="flex flex-row gap-5">
-                <PiNavigationArrowFill className="text-primary h-6 w-6 inline-block rotate-[135deg]" />
-                <p className="flex-1">
-                  Link video: <Link href="/video/forget_password.mp4" target="_blank" className="text-primary underline">quên mật khẩu</Link>
-                </p>
-              </div>
-              <div className="flex flex-row gap-5">
-                <PiNavigationArrowFill className="text-primary h-6 w-6 inline-block rotate-[135deg]" />
-                <p className="flex-1">
-                  Người dùng nhập email và hệ thống sẽ gửi link hướng dẫn đến mail người dùng.
-                </p>
-              </div>
-            </div>
-            <div className="basis-2/3 px-16 lg:flex hidden">
-              <video width="1472" height="907" controls preload="none">
-                <source src="/video/forget_password.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          </div>
-        </div>
-      </RevealOnScroll >
-      <RevealOnScroll className="w-full">
-        <div className="flex flex-col gap-4">
-          <h3 className="text-xl font-bold capitalize text-primary border-b-[2px] border-primary w-fit">
-            Trang chủ
-          </h3>
-          <div className="flex gap-4 md:flex-row flex-col self-start w-full">
-            <div className="flex flex-col gap-4 lg:basis-1/3 flex-1">
-              <div className="flex flex-row gap-5">
-                <PiNavigationArrowFill className="text-primary h-6 w-6 inline-block rotate-[135deg]" />
-                <p className="flex-1">
-                  Link video: <Link href="/video/home.mp4" target="_blank" className="text-primary underline">trang chủ</Link>
-                </p>
-              </div>
-              <div className="flex flex-row gap-5">
-                <PiNavigationArrowFill className="text-primary h-6 w-6 inline-block rotate-[135deg]" />
-                <p className="flex-1">
-                  Các bài viết mới nhất, các bài viết học thuật và quan trọng.
-                </p>
-              </div>
-              <div className="flex flex-row gap-5">
-                <PiNavigationArrowFill className="text-primary h-6 w-6 inline-block rotate-[135deg]" />
-                <p className="flex-1">
-                  Lịch cá nhân. <span className="italic">(đã bỏ ở LAB 4)</span>
-                </p>
-              </div>
-              <div className="flex flex-row gap-5">
-                <PiNavigationArrowFill className="text-primary h-6 w-6 inline-block rotate-[135deg]" />
-                <p className="flex-1">
-                  Thông báo mới nhất.
-                </p>
-              </div>
-            </div>
-            <div className="basis-2/3 px-16 lg:flex hidden">
-              <video width="1472" height="907" controls preload="none">
-                <source src="/video/home.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          </div>
-        </div>
-      </RevealOnScroll >
-      <RevealOnScroll className="w-full">
-        <div className="flex flex-col gap-4">
-          <h3 className="text-xl font-bold capitalize text-primary border-b-[2px] border-primary w-fit">
-            Bài viết
-          </h3>
-          <div className="flex gap-4 md:flex-row flex-col self-start w-full">
-            <div className="flex flex-col gap-4 lg:basis-1/3 flex-1">
-              <div className="flex flex-row gap-5">
-                <PiNavigationArrowFill className="text-primary h-6 w-6 inline-block rotate-[135deg]" />
-                <p className="flex-1">
-                  Link video: <Link href="/video/post.mp4" target="_blank" className="text-primary underline">bài viết</Link>
-                </p>
-              </div>
-              <div className="flex flex-row gap-5">
-                <CheckCircleIcon className="text-primary h-6 w-6 inline-block" />
-                <p className="flex-1">
-                  Lọc bài viết.
-                </p>
-              </div>
-              <div className="flex flex-row gap-5">
-                <CheckCircleIcon className="text-primary h-6 w-6 inline-block" />
-                <p className="flex-1">
-                  Xem chi tiết bài viết.
-                </p>
-              </div>
-              <div className="flex flex-row gap-5">
-                <CircleDashed className="text-yellow-500 h-6 w-6 inline-block" />
-                <p className="flex-1">
-                  Chỉnh sửa bài viết.
-                </p>
-              </div>
-              <div className="flex flex-row gap-5">
-                <CheckCircleIcon className="text-primary h-6 w-6 inline-block" />
-                <p className="flex-1">
-                  Tạo bài viết mới.
-                </p>
-              </div>
-              <div className="flex flex-row gap-5">
-                <CheckCircleIcon className="text-primary h-6 w-6 inline-block" />
-                <p className="flex-1">
-                  Xóa bài viết.
-                </p>
-              </div>
-              <div className="flex flex-row gap-5">
-                <CircleDashed className="text-yellow-500 h-6 w-6 inline-block" />
-                <p className="flex-1">
-                  Tự động đăng bài chúc mừng sinh nhật theo tháng. <span className="italic">(Yêu cầu LAB4)</span>
-                </p>
-              </div>
-            </div>
-            <div className="basis-2/3 px-16 lg:flex hidden">
-              <video width="1472" height="907" controls preload="none">
-                <source src="/video/post.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          </div>
-        </div>
-      </RevealOnScroll>
-      <RevealOnScroll className="w-full">
-        <div className="flex flex-col gap-4">
-          <h3 className="text-xl font-bold capitalize text-primary border-b-[2px] border-primary w-fit">
-            Nhân viên
-          </h3>
-          <div className="flex gap-4 md:flex-row flex-col self-start w-full">
-            <div className="flex flex-col gap-4 lg:basis-1/3 flex-1">
-              <div className="flex flex-row gap-5">
-                <PiNavigationArrowFill className="text-primary h-6 w-6 inline-block rotate-[135deg]" />
-                <p className="flex-1">
-                  Link video: <Link href="/video/staff.mp4" target="_blank" className="text-primary underline">nhân viên</Link>
-                </p>
-              </div>
-              <div className="flex flex-row gap-5">
-                <CheckCircleIcon className="text-primary h-6 w-6 inline-block" />
-                <p className="flex-1">
-                  Lọc nhân viên.
-                </p>
-              </div>
-              <div className="flex flex-row gap-5">
-                <CheckCircleIcon className="text-primary h-6 w-6 inline-block" />
-                <p className="flex-1">
-                  Xem chi tiết nhân viên.
-                </p>
-              </div>
-              <div className="flex flex-row gap-5">
-                <CheckCircleIcon className="text-primary h-6 w-6 inline-block" />
-                <p className="flex-1">
-                  Chỉnh sửa nhân viên.
-                </p>
-              </div>
-              <div className="flex flex-row gap-5">
-                <CheckCircleIcon className="text-primary h-6 w-6 inline-block" />
-                <p className="flex-1">
-                  Tạo nhân viên mới.
-                </p>
-              </div>
-              <div className="flex flex-row gap-5">
-                <CheckCircleIcon className="text-primary h-6 w-6 inline-block" />
-                <p className="flex-1">
-                  Xóa nhân viên.
-                </p>
-              </div>
-              <div className="flex flex-row gap-5">
-                <PiNavigationArrowFill className="text-primary h-6 w-6 inline-block rotate-[135deg]" />
-                <p className="flex-1">
-                  Cần chỉnh sửa lại 1 số thuộc tính phù hợp yêu cầu LAB4
-                </p>
-              </div>
-            </div>
-            <div className="basis-2/3 px-16 lg:flex hidden">
-              <video width="1472" height="907" controls preload="none">
-                <source src="/video/staff.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          </div>
-        </div>
-      </RevealOnScroll>
-      <RevealOnScroll className="w-full">
-        <div className="flex flex-col gap-4">
-          <h3 className="text-xl font-bold capitalize text-primary border-b-[2px] border-primary w-fit">
-            Phòng ban
-          </h3>
-          <div className="flex gap-4 md:flex-row flex-col self-start w-full">
-            <div className="flex flex-col gap-4 lg:basis-1/3 flex-1">
-              <div className="flex flex-row gap-5">
-                <PiNavigationArrowFill className="text-primary h-6 w-6 inline-block rotate-[135deg]" />
-                <p className="flex-1">
-                  Link video: <Link href="/video/staff.mp4" target="_blank" className="text-primary underline">phòng ban</Link>
-                </p>
-              </div>
-              <div className="flex flex-row gap-5">
-                <CheckCircleIcon className="text-primary h-6 w-6 inline-block" />
-                <p className="flex-1">
-                  Lọc phòng ban.
-                </p>
-              </div>
-              <div className="flex flex-row gap-5">
-                <CheckCircleIcon className="text-primary h-6 w-6 inline-block" />
-                <p className="flex-1">
-                  Xem chi tiết phòng ban.
-                </p>
-              </div>
-              <div className="flex flex-row gap-5">
-                <CheckCircleIcon className="text-primary h-6 w-6 inline-block" />
-                <p className="flex-1">
-                  Chỉnh sửa thông tin cơ bản phòng ban.
-                </p>
-              </div>
-              <div className="flex flex-row gap-5">
-                <CheckCircleIcon className="text-primary h-6 w-6 inline-block" />
-                <p className="flex-1">
-                  Chỉnh sửa lịch làm việc phòng ban. <span className="italic">(đã bỏ ở LAB 4)</span>
-                </p>
-              </div>
-              <div className="flex flex-row gap-5">
-                <CheckCircleIcon className="text-primary h-6 w-6 inline-block" />
-                <p className="flex-1">
-                  Tạo phòng ban mới.
-                </p>
-              </div>
-              <div className="flex flex-row gap-5">
-                <CheckCircleIcon className="text-primary h-6 w-6 inline-block" />
-                <p className="flex-1">
-                  Xóa phòng ban.
-                </p>
-              </div>
-            </div>
-            <div className="basis-2/3 px-16 lg:flex hidden">
-              <video width="1472" height="907" controls preload="none">
-                <source src="/video/staff.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          </div>
-        </div>
-      </RevealOnScroll>
-      <RevealOnScroll className="w-full">
-        <div className="flex flex-col gap-4">
-          <h3 className="text-xl font-bold capitalize text-primary border-b-[2px] border-primary w-fit">
-            Phòng họp
-          </h3>
-          <div className="flex gap-4 md:flex-row flex-col self-start w-full">
-            <div className="flex flex-col gap-4 lg:basis-1/3 flex-1">
-              <div className="flex flex-row gap-5">
-                <PiNavigationArrowFill className="text-primary h-6 w-6 inline-block rotate-[135deg]" />
-                <p className="flex-1">
-                  Link video: <Link href="/video/meeting_room.mp4" target="_blank" className="text-primary underline">phòng họp</Link>
-                </p>
-              </div>
-              <div className="flex flex-row gap-5">
-                <CheckCircleIcon className="text-primary h-6 w-6 inline-block" />
-                <p className="flex-1">
-                  Lọc phòng họp.
-                </p>
-              </div>
-              <div className="flex flex-row gap-5">
-                <CheckCircleIcon className="text-primary h-6 w-6 inline-block" />
-                <p className="flex-1">
-                  Chỉnh sửa phòng họp.
-                </p>
-              </div>
-              <div className="flex flex-row gap-5">
-                <CheckCircleIcon className="text-primary h-6 w-6 inline-block" />
-                <p className="flex-1">
-                  Tạo phòng họp mới.
-                </p>
-              </div>
-              <div className="flex flex-row gap-5">
-                <CheckCircleIcon className="text-primary h-6 w-6 inline-block" />
-                <p className="flex-1">
-                  Xóa phòng họp.
-                </p>
-              </div>
-            </div>
-            <div className="basis-2/3 px-16 lg:flex hidden">
-              <video width="1472" height="907" controls preload="none">
-                <source src="/video/meeting_room.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          </div>
-        </div>
-      </RevealOnScroll>
-      <RevealOnScroll className="w-full">
-        <div className="flex flex-col gap-4">
-          <h3 className="text-xl font-bold capitalize text-primary border-b-[2px] border-primary w-fit">
-            Tài nguyên
-          </h3>
-          <div className="flex gap-4 md:flex-row flex-col self-start w-full">
-            <div className="flex flex-col gap-4 lg:basis-1/3 flex-1">
-              <div className="flex flex-row gap-5">
-                <PiNavigationArrowFill className="text-primary h-6 w-6 inline-block rotate-[135deg]" />
-                <p className="flex-1">
-                  Link video: <Link href="/video/resource.mp4" target="_blank" className="text-primary underline">tài nguyên</Link>
-                </p>
-              </div>
-              <div className="flex flex-row gap-5">
-                <CheckCircleIcon className="text-primary h-6 w-6 inline-block" />
-                <p className="flex-1">
-                  Lọc tài nguyên.
-                </p>
-              </div>
-              <div className="flex flex-row gap-5">
-                <CheckCircleIcon className="text-primary h-6 w-6 inline-block" />
-                <p className="flex-1">
-                  Chỉnh sửa tài nguyên.
-                </p>
-              </div>
-              <div className="flex flex-row gap-5">
-                <CheckCircleIcon className="text-primary h-6 w-6 inline-block" />
-                <p className="flex-1">
-                  Tạo tài nguyên mới.
-                </p>
-              </div>
-              <div className="flex flex-row gap-5">
-                <CheckCircleIcon className="text-primary h-6 w-6 inline-block" />
-                <p className="flex-1">
-                  Xóa tài nguyên.
-                </p>
-              </div>
-            </div>
-            <div className="basis-2/3 px-16 lg:flex hidden">
-              <video width="1472" height="907" controls preload="none">
-                <source src="/video/resource.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          </div>
-        </div>
-      </RevealOnScroll>
-      <RevealOnScroll className="w-full">
-        <div className="flex flex-col gap-4">
-          <h3 className="text-xl font-bold capitalize text-primary border-b-[2px] border-primary w-fit">
-            Lịch phòng họp
-          </h3>
-          <div className="flex gap-4 md:flex-row flex-col self-start w-full">
-            <div className="flex flex-col gap-4 lg:basis-1/3 flex-1">
-              <div className="flex flex-row gap-5">
-                <PiNavigationArrowFill className="text-primary h-6 w-6 inline-block rotate-[135deg]" />
-                <p className="flex-1">
-                  Link video: <Link href="/video/meeting_calendar.mp4" target="_blank" className="text-primary underline">lịch phòng họp</Link>
-                </p>
-              </div>
-              <div className="flex flex-row gap-5">
-                <CheckCircleIcon className="text-primary h-6 w-6 inline-block" />
-                <p className="flex-1">
-                  Lọc lịch phòng họp.
-                </p>
-              </div>
-              <div className="flex flex-row gap-5">
-                <CheckCircleIcon className="text-primary h-6 w-6 inline-block" />
-                <p className="flex-1">
-                  Đặt lịch phòng họp. <span className="italic">(Có gửi thông báo và email)</span>
-                </p>
-              </div>
-              <div className="flex flex-row gap-5">
-                <CheckCircleIcon className="text-primary h-6 w-6 inline-block" />
-                <p className="flex-1">
-                  Xóa lịch phòng họp. <span className="italic">(Có gửi thông báo và email)</span>
-                </p>
-              </div>
-            </div>
-            <div className="basis-2/3 px-16 lg:flex hidden">
-              <video width="1472" height="907" controls preload="none">
-                <source src="/video/meeting_calendar.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          </div>
-        </div>
-      </RevealOnScroll>
-      <RevealOnScroll className="w-full">
-        <div className="flex flex-col gap-4">
-          <h3 className="text-xl font-bold capitalize text-primary border-b-[2px] border-primary w-fit">
-            Lịch tài nguyên
-          </h3>
-          <p>Tương tự lịch phòng họp</p>
-        </div>
-      </RevealOnScroll>
-      <RevealOnScroll className="w-full">
-        <div className="flex flex-col gap-4">
-          <h3 className="text-xl font-bold capitalize text-primary border-b-[2px] border-primary w-fit">
-            Thông báo
-          </h3>
-          <div className="flex gap-4 md:flex-row flex-col self-start w-full">
-            <div className="flex flex-col gap-4 lg:basis-1/3 flex-1">
-              <div className="flex flex-row gap-5">
-                <PiNavigationArrowFill className="text-primary h-6 w-6 inline-block rotate-[135deg]" />
-                <p className="flex-1">
-                  Link video: <Link href="/video/noti.mp4" target="_blank" className="text-primary underline">thông báo</Link>
-                </p>
-              </div>
-              <div className="flex flex-row gap-5">
-                <CheckCircleIcon className="text-primary h-6 w-6 inline-block" />
-                <p className="flex-1">
-                  Lọc thông báo.
-                </p>
-              </div>
-              <div className="flex flex-row gap-5">
-                <CheckCircleIcon className="text-primary h-6 w-6 inline-block" />
-                <p className="flex-1">
-                  Tạo thông báo. <span className="italic">(Có gửi thông báo và email)</span>
-                </p>
-              </div>
-              <div className="flex flex-row gap-5">
-                <CheckCircleIcon className="text-primary h-6 w-6 inline-block" />
-                <p className="flex-1">
-                  Đánh dấu đã đọc thông báo.
-                </p>
-              </div>
-            </div>
-            <div className="basis-2/3 px-16 lg:flex hidden">
-              <video width="1472" height="907" controls preload="none">
-                <source src="/video/noti.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          </div>
-        </div>
-      </RevealOnScroll>
-      <RevealOnScroll className="w-full">
-        <div className="flex flex-col gap-4">
-          <h3 className="text-xl font-bold capitalize text-primary border-b-[2px] border-primary w-fit">
-            Cá nhân
-          </h3>
-          <div className="flex gap-4 md:flex-row flex-col self-start w-full">
-            <div className="flex flex-col gap-4 lg:basis-1/3 flex-1">
-              <div className="flex flex-row gap-5">
-                <PiNavigationArrowFill className="text-primary h-6 w-6 inline-block rotate-[135deg]" />
-                <p className="flex-1">
-                  Link video: <Link href="/video/profile.mp4" target="_blank" className="text-primary underline">cá nhân</Link>
-                </p>
-              </div>
-              <div className="flex flex-row gap-5">
-                <CheckCircleIcon className="text-primary h-6 w-6 inline-block" />
-                <p className="flex-1">
-                  Đổi mật khẩu.
-                </p>
-              </div>
-              <div className="flex flex-row gap-5">
-                <CircleDashed className="text-yellow-500 h-6 w-6 inline-block" />
-                <p className="flex-1">
-                  Xem thông tin cá nhân. <span className="italic">(Yêu cầu LAB 4)</span>
-                </p>
-              </div>
-              <div className="flex flex-row gap-5">
-                <CircleDashed className="text-yellow-500 h-6 w-6 inline-block" />
-                <p className="flex-1">
-                  Chỉnh sửa thông tin cơ bản. <span className="italic">(Yêu cầu LAB 4)</span>
-                </p>
-              </div>
-            </div>
-            <div className="basis-2/3 px-16 lg:flex hidden">
-              <video width="1472" height="907" controls preload="none">
-                <source src="/video/profile.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          </div>
-        </div>
-      </RevealOnScroll>
-      <RevealOnScroll className="w-full">
-        <div className="flex flex-col gap-4">
-          <h3 className="text-xl font-bold capitalize text-primary border-b-[2px] border-primary w-fit">
-            Responsive
-          </h3>
-          <div className="flex flex-col lg:flex-row gap-8">
-            <div className="flex flex-col gap-2 basis-3/4">
-              <h4 className="text-primary text-xl text-center font-bold">Window</h4>
-              <Image
-                className={`object-contain w-full h-auto`}
-                src="/images/project/window/login.png"
-                priority
-                width={1418}
-                height={903}
-                alt="login"
-              ></Image>
-              <Image
-                className={`object-contain w-full h-auto`}
-                src="/images/project/window/home.png"
-                priority
-                width={1418}
-                height={903}
-                alt="home"
-              ></Image>
-              <Image
-                className={`object-contain w-full h-auto`}
-                src="/images/project/window/post.png"
-                priority
-                width={1418}
-                height={903}
-                alt="post"
-              ></Image>
-              <Image
-                className={`object-contain w-full h-auto`}
-                src="/images/project/window/post_detail.png"
-                priority
-                width={1418}
-                height={903}
-                alt="post_detail"
-              ></Image>
-              <Image
-                className={`object-contain w-full h-auto`}
-                src="/images/project/window/post_create.png"
-                priority
-                width={1418}
-                height={903}
-                alt="post_create"
-              ></Image>
-              <Image
-                className={`object-contain w-full h-auto`}
-                src="/images/project/window/staff.png"
-                priority
-                width={1418}
-                height={903}
-                alt="staff"
-              ></Image>
-              <Image
-                className={`object-contain w-full h-auto`}
-                src="/images/project/window/staff_detail.png"
-                priority
-                width={1418}
-                height={903}
-                alt="staff_detail"
-              ></Image>
-              <Image
-                className={`object-contain w-full h-auto`}
-                src="/images/project/window/staff_create.png"
-                priority
-                width={1418}
-                height={903}
-                alt="staff_create"
-              ></Image>
-              <Image
-                className={`object-contain w-full h-auto`}
-                src="/images/project/window/unit.png"
-                priority
-                width={1418}
-                height={903}
-                alt="unit"
-              ></Image>
-              <Image
-                className={`object-contain w-full h-auto`}
-                src="/images/project/window/unit_detail.png"
-                priority
-                width={1418}
-                height={903}
-                alt="unit_detail"
-              ></Image>
-              <Image
-                className={`object-contain w-full h-auto`}
-                src="/images/project/window/meeting_room.png"
-                priority
-                width={1418}
-                height={903}
-                alt="meeting_room"
-              ></Image>
-              <Image
-                className={`object-contain w-full h-auto`}
-                src="/images/project/window/meeting_room_book.png"
-                priority
-                width={1418}
-                height={903}
-                alt="meeting_room_book"
-              ></Image>
-              <Image
-                className={`object-contain w-full h-auto`}
-                src="/images/project/window/meeting_room_calendar.png"
-                priority
-                width={1418}
-                height={903}
-                alt="meeting_room_calendar"
-              ></Image>
-              <Image
-                className={`object-contain w-full h-auto`}
-                src="/images/project/window/noti.png"
-                priority
-                width={1418}
-                height={903}
-                alt="noti"
-              ></Image>
-            </div>
-            <div className=" flex flex-col gap-2 basis-1/4">
-              <h4 className="text-primary text-xl text-center font-bold">Mobile</h4>
-              <Image
-                className={`object-contain w-full h-auto`}
-                src="/images/project/mobile/login.png"
-                priority
-                width={625}
-                height={903}
-                alt="login"
-              ></Image>
-              <Image
-                className={`object-contain w-full h-auto`}
-                src="/images/project/mobile/home.png"
-                priority
-                width={625}
-                height={903}
-                alt="home"
-              ></Image>
-              <Image
-                className={`object-contain w-full h-auto`}
-                src="/images/project/mobile/post.png"
-                priority
-                width={625}
-                height={903}
-                alt="post"
-              ></Image>
-              <Image
-                className={`object-contain w-full h-auto`}
-                src="/images/project/mobile/post_detail.png"
-                priority
-                width={625}
-                height={903}
-                alt="post_detail"
-              ></Image>
-              <Image
-                className={`object-contain w-full h-auto`}
-                src="/images/project/mobile/post_create.png"
-                priority
-                width={625}
-                height={903}
-                alt="post_create"
-              ></Image>
-              <Image
-                className={`object-contain w-full h-auto`}
-                src="/images/project/mobile/staff.png"
-                priority
-                width={625}
-                height={903}
-                alt="staff"
-              ></Image>
-              <Image
-                className={`object-contain w-full h-auto`}
-                src="/images/project/mobile/staff_detail.png"
-                priority
-                width={625}
-                height={903}
-                alt="staff_detail"
-              ></Image>
-              <Image
-                className={`object-contain w-full h-auto`}
-                src="/images/project/mobile/staff_create.png"
-                priority
-                width={625}
-                height={903}
-                alt="staff_create"
-              ></Image>
-              <Image
-                className={`object-contain w-full h-auto`}
-                src="/images/project/mobile/unit.png"
-                priority
-                width={625}
-                height={903}
-                alt="unit"
-              ></Image>
-              <Image
-                className={`object-contain w-full h-auto`}
-                src="/images/project/mobile/unit_detail.png"
-                priority
-                width={625}
-                height={903}
-                alt="unit_detail"
-              ></Image>
-              <Image
-                className={`object-contain w-full h-auto`}
-                src="/images/project/mobile/meeting_room.png"
-                priority
-                width={625}
-                height={903}
-                alt="meeting_room"
-              ></Image>
-              <Image
-                className={`object-contain w-full h-auto`}
-                src="/images/project/mobile/meeting_room_book.png"
-                priority
-                width={625}
-                height={903}
-                alt="meeting_room_book"
-              ></Image>
-              <Image
-                className={`object-contain w-full h-auto`}
-                src="/images/project/mobile/meeting_room_calendar.png"
-                priority
-                width={625}
-                height={903}
-                alt="meeting_room_calendar"
-              ></Image>
-              <Image
-                className={`object-contain w-full h-auto`}
-                src="/images/project/mobile/noti.png"
-                priority
-                width={625}
-                height={903}
-                alt="noti"
-              ></Image>
-            </div>
+          <div className="flex flex-row gap-5">
+            <PiNavigationArrowFill className="text-primary h-6 w-6 inline-block rotate-[135deg]" />
+            <p className="flex-1">
+              <Link
+                href="/project/5-5-2024"
+                target="_blank"
+                className="underline underline-offset-2"
+              >
+                05/05/2024
+              </Link>
+            </p>
           </div>
         </div>
       </RevealOnScroll>
