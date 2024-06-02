@@ -72,7 +72,7 @@ const ProjectPage = () => {
             Giới thiệu
           </h3>
           <div className="flex gap-4 md:flex-row flex-col self-start w-full">
-            <div className="flex gap-4 basis-1/4 flex-col self-start w-full">
+            <div className="flex gap-4 lg:basis-1/4 flex-col self-start w-full">
               <div className="flex flex-row gap-5">
                 <PiNavigationArrowFill className="text-primary h-6 w-6 inline-block rotate-[135deg]" />
                 <p className="flex-1">

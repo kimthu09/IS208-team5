@@ -63,63 +63,63 @@ export interface DocumentItem {
   pdfPath: string;
 }
 
-export const bienbanItems: DocumentItem[] = [
-  {
-    title: "Biên bản cuộc họp lần 1",
-    pdfPath: "/files/documents/bien-ban/nhom5-bienbanhoplan1.pdf",
-  },
-  {
-    title: "Biên bản cuộc họp lần 2",
-    pdfPath: "/files/documents/bien-ban/nhom5-bienbanhoplan2.pdf",
-  },
-  {
-    title: "Biên bản cuộc họp lần 3",
-    pdfPath: "/files/documents/bien-ban/nhom5-bienbanhoplan3.pdf",
-  },
-];
-
-export const phancongItems: DocumentItem[] = [
+export const tuan12Items: DocumentItem[] = [
   {
     title: "Phân công thành viên ban đầu",
     pdfPath: "/files/documents/phan-cong/nhom5-phancongbandau.pdf",
   },
   {
+    title: "Biên bản cuộc họp lần 1",
+    pdfPath: "/files/documents/bien-ban/nhom5-bienbanhoplan1.pdf",
+  },
+  {
     title: "Phân công công việc lần 1",
     pdfPath: "/files/documents/phan-cong/nhom5-phanconglan1.pdf",
+  },
+];
+export const tuan34Items: DocumentItem[] = [
+  {
+    title: "Biên bản cuộc họp lần 2",
+    pdfPath: "/files/documents/bien-ban/nhom5-bienbanhoplan2.pdf",
   },
   {
     title: "Phân công công việc lần 2",
     pdfPath: "/files/documents/phan-cong/nhom5-phanconglan2.pdf",
   },
 ];
-
-export const sprintReviewItems: DocumentItem[] = [
+export const tuan56Items: DocumentItem[] = [
   {
-    title: "Sprint Review Sprint 1",
-    pdfPath: "/files/documents/sprint-review/nhom5-sprintreview1.pdf",
+    title: "Biên bản cuộc họp lần 3",
+    pdfPath: "/files/documents/bien-ban/nhom5-bienbanhoplan3.pdf",
   },
-  {
-    title: "Sprint Review Sprint 2",
-    pdfPath: "/files/documents/sprint-review/nhom5-sprintreview2.pdf",
-  },
-  {
-    title: "Sprint Review Sprint 3",
-    pdfPath: "/files/documents/sprint-review/nhom5-sprintreview3.pdf",
-  },
-];
-
-export const sprintPlanningItems: DocumentItem[] = [
   {
     title: "Sprint Planning Sprint 1",
     pdfPath: "/files/documents/sprint-planning/nhom5-sprintplanning1.pdf",
   },
   {
+    title: "Sprint Review Sprint 1",
+    pdfPath: "/files/documents/sprint-review/nhom5-sprintreview1.pdf",
+  },
+];
+export const tuan78Items: DocumentItem[] = [
+  {
     title: "Sprint Planning Sprint 2",
     pdfPath: "/files/documents/sprint-planning/nhom5-sprintplanning2.pdf",
   },
   {
+    title: "Sprint Review Sprint 2",
+    pdfPath: "/files/documents/sprint-review/nhom5-sprintreview2.pdf",
+  },
+];
+
+export const tuan910Items: DocumentItem[] = [
+  {
     title: "Sprint Planning Sprint 3",
     pdfPath: "/files/documents/sprint-planning/nhom5-sprintplanning3.pdf",
+  },
+  {
+    title: "Sprint Review Sprint 3",
+    pdfPath: "/files/documents/sprint-review/nhom5-sprintreview3.pdf",
   },
 ];
 
