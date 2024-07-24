@@ -12,6 +12,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { PiNavigationArrowFill } from "react-icons/pi";
+import ImageComponent from "@/components/image-component";
 
 const ProjectPage = () => {
   return (
@@ -21,14 +22,14 @@ const ProjectPage = () => {
         <div className="flex gap-8 md:flex-row flex-col self-start">
           <div className="basis-2/5 px-16 lg:block hidden">
             <Link href="https://storyset.com/people" target="_blank">
-              <Image
+              <ImageComponent
                 className={`object-contain w-full h-auto`}
                 src="/company.png"
                 priority
                 width={400}
                 height={400}
                 alt="Company"
-              ></Image>
+              ></ImageComponent>
             </Link>
           </div>
           <div className="lg:basis-3/5 flex-1 flex flex-col gap-8">
@@ -128,14 +129,14 @@ const ProjectPage = () => {
               </div>
             </div>
             <div className="basis-3/4 px-16 lg:flex hidden">
-              <Image
+              <ImageComponent
                 className={`object-cover w-full h-auto`}
                 src="/images/project/home.png"
                 priority
                 width={1918}
                 height={911}
                 alt="Home page"
-              ></Image>
+              ></ImageComponent>
             </div>
           </div>
         </div>
@@ -152,30 +153,28 @@ const ProjectPage = () => {
               </AccordionTrigger>
               <AccordionContent>
                 <div className="flex flex-col gap-2 mt-4">
-                  <div className="flex flex-row gap-2 items-center">
-                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
-                    <p className="flex-1">Đăng nhập</p>
-                  </div>
-                  <Image
-                    className={`object-contain md:w-1/2 h-auto self-center`}
+                  <ImageComponent
+                    className={`object-contain md:w-3/4 h-auto self-center`}
                     src="/images/project/final/login.png"
                     priority
                     width={1418}
                     height={903}
                     alt="login"
-                  ></Image>
-                  <div className="flex flex-row gap-2 items-center">
-                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
-                    <p className="flex-1">Quên mật khẩu</p>
-                  </div>
-                  <Image
-                    className={`object-contain md:w-1/2 h-auto self-center`}
+                  ></ImageComponent>
+                  <p className="flex-1 self-center text-base italic mb-4">
+                    Đăng nhập
+                  </p>
+                  <ImageComponent
+                    className={`object-contain md:w-3/4 h-auto self-center`}
                     src="/images/project/final/reset-password.png"
                     priority
                     width={1418}
                     height={903}
                     alt="reset-password"
-                  ></Image>
+                  ></ImageComponent>
+                  <p className="flex-1 self-center text-base italic mb-4">
+                    Quên mật khẩu
+                  </p>
                 </div>
               </AccordionContent>
             </AccordionItem>
@@ -185,80 +184,72 @@ const ProjectPage = () => {
               </AccordionTrigger>
               <AccordionContent>
                 <div className="flex flex-col gap-2 mt-4">
-                  <div className="flex flex-row gap-2 items-center">
-                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
-                    <p className="flex-1">Lọc bảng tin</p>
-                  </div>
-                  <Image
-                    className={`object-contain md:w-1/2 h-auto self-center`}
+                  <ImageComponent
+                    className={`object-contain md:w-2/3 h-auto self-center`}
                     src="/images/project/final/post-filter.png"
                     priority
                     width={1418}
                     height={903}
                     alt="post-filter"
-                  ></Image>
-                  <div className="flex flex-row gap-2 items-center">
-                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
-                    <p className="flex-1">Xem chi tiết bảng tin</p>
-                  </div>
-                  <Image
-                    className={`object-contain md:w-1/2 h-auto self-center`}
+                  ></ImageComponent>
+                  <p className="flex-1 self-center text-base italic mb-4">
+                    Lọc bảng tin
+                  </p>
+                  <ImageComponent
+                    className={`object-contain md:w-3/4 h-auto self-center`}
                     src="/images/project/final/post-detail.png"
                     priority
                     width={1418}
                     height={903}
                     alt="post-detail"
-                  ></Image>
-                  <div className="flex flex-row gap-2 items-center">
-                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
-                    <p className="flex-1">Tạo bảng tin mới</p>
-                  </div>
-                  <Image
-                    className={`object-contain md:w-1/2 h-auto self-center`}
+                  ></ImageComponent>
+                  <p className="flex-1 self-center text-base italic mb-4">
+                    Xem chi tiết bảng tin
+                  </p>
+                  <ImageComponent
+                    className={`object-contain md:w-3/4 h-auto self-center`}
                     src="/images/project/final/post-create.png"
                     priority
                     width={1418}
                     height={903}
                     alt="post-create"
-                  ></Image>
-                  <div className="flex flex-row gap-2 items-center">
-                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
-                    <p className="flex-1">Chỉnh sửa bảng tin</p>
-                  </div>
-                  <Image
-                    className={`object-contain md:w-1/2 h-auto self-center`}
+                  ></ImageComponent>
+                  <p className="flex-1 self-center text-base italic mb-4">
+                    Tạo bảng tin mới
+                  </p>
+                  <ImageComponent
+                    className={`object-contain md:w-3/4 h-auto self-center`}
                     src="/images/project/final/post-update.png"
                     priority
                     width={1418}
                     height={903}
                     alt="post-update"
-                  ></Image>
-                  <div className="flex flex-row gap-2 items-center">
-                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
-                    <p className="flex-1">Xóa bảng tin</p>
-                  </div>
-                  <Image
-                    className={`object-contain md:w-1/2 h-auto self-center`}
+                  ></ImageComponent>
+                  <p className="flex-1 self-center text-base italic mb-4">
+                    Chỉnh sửa bảng tin
+                  </p>
+                  <ImageComponent
+                    className={`object-contain md:w-3/4 h-auto self-center`}
                     src="/images/project/final/post-delete.png"
                     priority
                     width={1418}
                     height={903}
                     alt="post-delete"
-                  ></Image>
-                  <div className="flex flex-row gap-2 items-center">
-                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
-                    <p className="flex-1">
-                      Tự động đăng bài chúc mừng sinh nhật theo tháng.
-                    </p>
-                  </div>
-                  <Image
-                    className={`object-contain md:w-1/2 h-auto self-center`}
+                  ></ImageComponent>
+                  <p className="flex-1 self-center text-base italic mb-4">
+                    Xóa bảng tin
+                  </p>
+                  <ImageComponent
+                    className={`object-contain md:w-3/4 h-auto self-center`}
                     src="/images/project/final/post-birthday.png"
                     priority
                     width={1418}
                     height={903}
                     alt="post-birthday"
-                  ></Image>
+                  ></ImageComponent>
+                  <p className="flex-1 self-center text-base italic mb-4">
+                    Tự động đăng bài chúc mừng sinh nhật theo tháng
+                  </p>
                 </div>
               </AccordionContent>
             </AccordionItem>
@@ -268,66 +259,61 @@ const ProjectPage = () => {
               </AccordionTrigger>
               <AccordionContent>
                 <div className="flex flex-col gap-2 mt-4">
-                  <div className="flex flex-row gap-2 items-center">
-                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
-                    <p className="flex-1">Lọc nhân viên</p>
-                  </div>
-                  <Image
-                    className={`object-contain md:w-1/2 h-auto self-center`}
+                  <ImageComponent
+                    className={`object-contain md:w-3/4 h-auto self-center`}
                     src="/images/project/final/staff-filter.png"
                     priority
                     width={1418}
                     height={903}
                     alt="staff-filter"
-                  ></Image>
-                  <div className="flex flex-row gap-2 items-center">
-                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
-                    <p className="flex-1">Xem chi tiết nhân viên</p>
-                  </div>
-                  <Image
-                    className={`object-contain md:w-1/2 h-auto self-center`}
+                  ></ImageComponent>
+                  <p className="flex-1 self-center text-base italic mb-4">
+                    Lọc nhân viên
+                  </p>
+                  <ImageComponent
+                    className={`object-contain md:w-3/4 h-auto self-center`}
                     src="/images/project/final/staff-detail.png"
                     priority
                     width={1418}
                     height={903}
                     alt="staff-detail"
-                  ></Image>
-                  <div className="flex flex-row gap-2 items-center">
-                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
-                    <p className="flex-1">Tạo nhân viên mới</p>
-                  </div>
-                  <Image
-                    className={`object-contain md:w-1/2 h-auto self-center`}
+                  ></ImageComponent>
+                  <p className="flex-1 self-center text-base italic mb-4">
+                    Xem chi tiết nhân viên
+                  </p>
+                  <ImageComponent
+                    className={`object-contain md:w-3/4 h-auto self-center`}
                     src="/images/project/final/staff-detail.png"
                     priority
                     width={1418}
                     height={903}
                     alt="staff-create"
-                  ></Image>
-                  <div className="flex flex-row gap-2 items-center">
-                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
-                    <p className="flex-1">Chỉnh sửa nhân viên</p>
-                  </div>
-                  <Image
-                    className={`object-contain md:w-1/2 h-auto self-center`}
+                  ></ImageComponent>
+                  <p className="flex-1 self-center text-base italic mb-4">
+                    Tạo nhân viên mới
+                  </p>
+                  <ImageComponent
+                    className={`object-contain md:w-3/4 h-auto self-center`}
                     src="/images/project/final/staff-edit.png"
                     priority
                     width={1418}
                     height={903}
                     alt="staff-edit"
-                  ></Image>
-                  <div className="flex flex-row gap-2 items-center">
-                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
-                    <p className="flex-1">Xóa nhân viên</p>
-                  </div>
-                  <Image
-                    className={`object-contain md:w-1/2 h-auto self-center`}
+                  ></ImageComponent>
+                  <p className="flex-1 self-center text-base italic mb-4">
+                    Chỉnh sửa nhân viên
+                  </p>
+                  <ImageComponent
+                    className={`object-contain md:w-3/4 h-auto self-center`}
                     src="/images/project/final/staff-delete.png"
                     priority
                     width={1418}
                     height={903}
                     alt="staff-delete"
-                  ></Image>
+                  ></ImageComponent>
+                  <p className="flex-1 self-center text-base italic mb-4">
+                    Xóa nhân viên
+                  </p>
                 </div>
               </AccordionContent>
             </AccordionItem>
@@ -337,67 +323,62 @@ const ProjectPage = () => {
               </AccordionTrigger>
               <AccordionContent>
                 <div className="flex flex-col gap-2 mt-4">
-                  <div className="flex flex-row gap-2 items-center">
-                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
-                    <p className="flex-1">Lọc phòng ban</p>
-                  </div>
-                  <Image
-                    className={`object-contain md:w-1/2 h-auto self-center`}
+                  <ImageComponent
+                    className={`object-contain md:w-3/4 h-auto self-center`}
                     src="/images/project/final/unit-filter.png"
                     priority
                     width={1418}
                     height={903}
                     alt="unit-filter"
-                  ></Image>
-                  <div className="flex flex-row gap-2 items-center">
-                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
-                    <p className="flex-1">Xem chi tiết phòng ban</p>
-                  </div>
-                  <Image
-                    className={`object-contain md:w-1/2 h-auto self-center`}
+                  ></ImageComponent>
+                  <p className="flex-1 self-center text-base italic mb-4">
+                    Lọc phòng ban
+                  </p>
+                  <ImageComponent
+                    className={`object-contain md:w-3/4 h-auto self-center`}
                     src="/images/project/final/unit-detail.png"
                     priority
                     width={1418}
                     height={903}
                     alt="unit-detail"
-                  ></Image>
-                  <div className="flex flex-row gap-2 items-center">
-                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
-                    <p className="flex-1">Tạo phòng ban mới</p>
-                  </div>
-                  <Image
-                    className={`object-contain md:w-1/2 h-auto self-center`}
+                  ></ImageComponent>
+                  <p className="flex-1 self-center text-base italic mb-4">
+                    Xem chi tiết phòng ban
+                  </p>
+                  <ImageComponent
+                    className={`object-contain md:w-3/4 h-auto self-center`}
                     src="/images/project/final/unit-create.png"
                     priority
                     width={1418}
                     height={903}
                     alt="unit-create"
-                  ></Image>
-                  <div className="flex flex-row gap-2 items-center">
-                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
-                    <p className="flex-1">Chỉnh sửa phòng ban</p>
-                  </div>
-                  <Image
-                    className={`object-contain md:w-1/2 h-auto self-center`}
+                  ></ImageComponent>
+                  <p className="flex-1 self-center text-base italic mb-4">
+                    Tạo phòng ban mới
+                  </p>
+                  <ImageComponent
+                    className={`object-contain md:w-3/4 h-auto self-center`}
                     src="/images/project/final/unit-update.png"
                     priority
                     width={1418}
                     height={903}
                     alt="unit-update"
-                  ></Image>
-                  <div className="flex flex-row gap-2 items-center">
-                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
-                    <p className="flex-1">Xóa phòng ban</p>
-                  </div>
-                  <Image
-                    className={`object-contain md:w-1/2 h-auto self-center`}
+                  ></ImageComponent>
+                  <p className="flex-1 self-center text-base italic mb-4">
+                    Chỉnh sửa phòng ban
+                  </p>
+                  <ImageComponent
+                    className={`object-contain md:w-3/4 h-auto self-center`}
                     src="/images/project/final/unit-delete.png"
                     priority
                     width={1418}
                     height={903}
                     alt="unit-delete"
-                  ></Image>
-                  <p>
+                  ></ImageComponent>
+                  <p className="flex-1 self-center text-base italic mb-4">
+                    Xóa phòng ban
+                  </p>
+                  <p className="text-base">
                     <span className="text-primary"> Note: </span>
                     Phân quyền sẽ được cài đặt ở phòng ban. Các nhân viên thuộc
                     phòng ban đều có các quyền mà phòng ban có.
@@ -411,54 +392,50 @@ const ProjectPage = () => {
               </AccordionTrigger>
               <AccordionContent>
                 <div className="flex flex-col gap-2 mt-4">
-                  <div className="flex flex-row gap-2 items-center">
-                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
-                    <p className="flex-1">Lọc phòng họp</p>
-                  </div>
-                  <Image
-                    className={`object-contain md:w-1/2 h-auto self-center`}
+                  <ImageComponent
+                    className={`object-contain md:w-3/4 h-auto self-center`}
                     src="/images/project/final/meeting-room-filter.png"
                     priority
                     width={1418}
                     height={903}
                     alt="meeting-room-filter"
-                  ></Image>
-                  <div className="flex flex-row gap-2 items-center">
-                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
-                    <p className="flex-1">Tạo phòng họp mới</p>
-                  </div>
-                  <Image
-                    className={`object-contain md:w-1/2 h-auto self-center`}
+                  ></ImageComponent>
+                  <p className="flex-1 self-center text-base italic mb-4">
+                    Lọc phòng họp
+                  </p>
+                  <ImageComponent
+                    className={`object-contain md:w-3/4 h-auto self-center`}
                     src="/images/project/final/meeting-room-create.png"
                     priority
                     width={1418}
                     height={903}
                     alt="meeting-room-create"
-                  ></Image>
-                  <div className="flex flex-row gap-2 items-center">
-                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
-                    <p className="flex-1">Chỉnh sửa phòng họp</p>
-                  </div>
-                  <Image
-                    className={`object-contain md:w-1/2 h-auto self-center`}
+                  ></ImageComponent>
+                  <p className="flex-1 self-center text-base italic mb-4">
+                    Tạo phòng họp mới
+                  </p>
+                  <ImageComponent
+                    className={`object-contain md:w-3/4 h-auto self-center`}
                     src="/images/project/final/meeting-room-edit.png"
                     priority
                     width={1418}
                     height={903}
                     alt="meeting-room-edit"
-                  ></Image>
-                  <div className="flex flex-row gap-2 items-center">
-                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
-                    <p className="flex-1">Xóa phòng họp</p>
-                  </div>
-                  <Image
-                    className={`object-contain md:w-1/2 h-auto self-center`}
+                  ></ImageComponent>
+                  <p className="flex-1 self-center text-base italic mb-4">
+                    Chỉnh sửa phòng họp
+                  </p>
+                  <ImageComponent
+                    className={`object-contain md:w-3/4 h-auto self-center`}
                     src="/images/project/final/meeting-room-delete.png"
                     priority
                     width={1418}
                     height={903}
                     alt="meeting-room-delete"
-                  ></Image>
+                  ></ImageComponent>
+                  <p className="flex-1 self-center text-base italic mb-4">
+                    Xóa phòng họp
+                  </p>
                 </div>
               </AccordionContent>
             </AccordionItem>
@@ -471,46 +448,39 @@ const ProjectPage = () => {
               </AccordionTrigger>
               <AccordionContent>
                 <div className="flex flex-col gap-2 mt-4">
-                  <div className="flex flex-row gap-2 items-center">
-                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
-                    <p className="flex-1">Lọc lịch phòng họp</p>
-                  </div>
-                  <Image
-                    className={`object-contain md:w-1/2 h-auto self-center`}
+                  <ImageComponent
+                    className={`object-contain md:w-3/4 h-auto self-center`}
                     src="/images/project/final/meeting-room-calendar-filter.png"
                     priority
                     width={1418}
                     height={903}
                     alt="meeting-room-calendar-filter"
-                  ></Image>
-                  <div className="flex flex-row gap-2 items-center">
-                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
-                    <p className="flex-1">
-                      Đặt lịch phòng họp (Có gửi thông báo và email)
-                    </p>
-                  </div>
-                  <Image
-                    className={`object-contain md:w-1/2 h-auto self-center`}
+                  ></ImageComponent>
+                  <p className="flex-1 self-center text-base italic mb-4">
+                    Lọc lịch phòng họp
+                  </p>
+                  <ImageComponent
+                    className={`object-contain md:w-3/4 h-auto self-center`}
                     src="/images/project/final/meeting-room-calendar-book.png"
                     priority
                     width={1418}
                     height={903}
                     alt="meeting-room-calendar-book"
-                  ></Image>
-                  <div className="flex flex-row gap-2 items-center">
-                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
-                    <p className="flex-1">
-                      Xóa lịch phòng họp (Có gửi thông báo và email)
-                    </p>
-                  </div>
-                  <Image
-                    className={`object-contain md:w-1/2 h-auto self-center`}
+                  ></ImageComponent>
+                  <p className="flex-1 self-center text-base italic mb-4">
+                    Đặt lịch phòng họp (Có gửi thông báo và email)
+                  </p>
+                  <ImageComponent
+                    className={`object-contain md:w-3/4 h-auto self-center`}
                     src="/images/project/final/meeting-room-calendar-delete.png"
                     priority
                     width={1418}
                     height={903}
                     alt="meeting-room-calendar-delete"
-                  ></Image>
+                  ></ImageComponent>
+                  <p className="flex-1 self-center text-base italic mb-4">
+                    Xóa lịch phòng họp (Có gửi thông báo và email)
+                  </p>
                 </div>
               </AccordionContent>
             </AccordionItem>
@@ -520,54 +490,50 @@ const ProjectPage = () => {
               </AccordionTrigger>
               <AccordionContent>
                 <div className="flex flex-col gap-2 mt-4">
-                  <div className="flex flex-row gap-2 items-center">
-                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
-                    <p className="flex-1">Lọc tài nguyên</p>
-                  </div>
-                  <Image
-                    className={`object-contain md:w-1/2 h-auto self-center`}
+                  <ImageComponent
+                    className={`object-contain md:w-3/4 h-auto self-center`}
                     src="/images/project/final/resource-filter.png"
                     priority
                     width={1418}
                     height={903}
                     alt="resource-filter"
-                  ></Image>
-                  <div className="flex flex-row gap-2 items-center">
-                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
-                    <p className="flex-1">Tạo tài nguyên mới</p>
-                  </div>
-                  <Image
-                    className={`object-contain md:w-1/2 h-auto self-center`}
+                  ></ImageComponent>
+                  <p className="flex-1 self-center text-base italic mb-4">
+                    Lọc tài nguyên
+                  </p>
+                  <ImageComponent
+                    className={`object-contain md:w-3/4 h-auto self-center`}
                     src="/images/project/final/resource-create.png"
                     priority
                     width={1418}
                     height={903}
                     alt="resource-create"
-                  ></Image>
-                  <div className="flex flex-row gap-2 items-center">
-                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
-                    <p className="flex-1">Chỉnh sửa tài nguyên</p>
-                  </div>
-                  <Image
-                    className={`object-contain md:w-1/2 h-auto self-center`}
+                  ></ImageComponent>
+                  <p className="flex-1 self-center text-base italic mb-4">
+                    Tạo tài nguyên mới
+                  </p>
+                  <ImageComponent
+                    className={`object-contain md:w-3/4 h-auto self-center`}
                     src="/images/project/final/resource-edit.png"
                     priority
                     width={1418}
                     height={903}
                     alt="resource-edit"
-                  ></Image>
-                  <div className="flex flex-row gap-2 items-center">
-                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
-                    <p className="flex-1">Xóa tài nguyên</p>
-                  </div>
-                  <Image
-                    className={`object-contain md:w-1/2 h-auto self-center`}
+                  ></ImageComponent>
+                  <p className="flex-1 self-center text-base italic mb-4">
+                    Chỉnh sửa tài nguyên
+                  </p>
+                  <ImageComponent
+                    className={`object-contain md:w-3/4 h-auto self-center`}
                     src="/images/project/final/resource-delete.png"
                     priority
                     width={1418}
                     height={903}
                     alt="resource-delete"
-                  ></Image>
+                  ></ImageComponent>
+                  <p className="flex-1 self-center text-base italic mb-4">
+                    Xóa tài nguyên
+                  </p>
                 </div>
               </AccordionContent>
             </AccordionItem>
@@ -577,46 +543,39 @@ const ProjectPage = () => {
               </AccordionTrigger>
               <AccordionContent>
                 <div className="flex flex-col gap-2 mt-4">
-                  <div className="flex flex-row gap-2 items-center">
-                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
-                    <p className="flex-1">Lọc lịch tài nguyên</p>
-                  </div>
-                  <Image
-                    className={`object-contain md:w-1/2 h-auto self-center`}
+                  <ImageComponent
+                    className={`object-contain md:w-3/4 h-auto self-center`}
                     src="/images/project/final/meeting-room-calendar-filter.png"
                     priority
                     width={1418}
                     height={903}
                     alt="resource-calendar-filter"
-                  ></Image>
-                  <div className="flex flex-row gap-2 items-center">
-                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
-                    <p className="flex-1">
-                      Đặt lịch tài nguyên (Có gửi thông báo và email)
-                    </p>
-                  </div>
-                  <Image
-                    className={`object-contain md:w-1/2 h-auto self-center`}
+                  ></ImageComponent>
+                  <p className="flex-1 self-center text-base italic mb-4">
+                    Lọc lịch tài nguyên
+                  </p>
+                  <ImageComponent
+                    className={`object-contain md:w-3/4 h-auto self-center`}
                     src="/images/project/final/meeting-room-calendar-book.png"
                     priority
                     width={1418}
                     height={903}
                     alt="resource-calendar-book"
-                  ></Image>
-                  <div className="flex flex-row gap-2 items-center">
-                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
-                    <p className="flex-1">
-                      Xóa lịch tài nguyên (Có gửi thông báo và email)
-                    </p>
-                  </div>
-                  <Image
-                    className={`object-contain md:w-1/2 h-auto self-center`}
+                  ></ImageComponent>
+                  <p className="flex-1 self-center text-base italic mb-4">
+                    Đặt lịch tài nguyên
+                  </p>
+                  <ImageComponent
+                    className={`object-contain md:w-3/4 h-auto self-center`}
                     src="/images/project/final/meeting-room-calendar-delete.png"
                     priority
                     width={1418}
                     height={903}
                     alt="resource-calendar-delete"
-                  ></Image>
+                  ></ImageComponent>
+                  <p className="flex-1 self-center text-base italic mb-4">
+                    Xóa lịch tài nguyên
+                  </p>
                 </div>
               </AccordionContent>
             </AccordionItem>
@@ -626,44 +585,39 @@ const ProjectPage = () => {
               </AccordionTrigger>
               <AccordionContent>
                 <div className="flex flex-col gap-2 mt-4">
-                  <div className="flex flex-row gap-2 items-center">
-                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
-                    <p className="flex-1">Lọc thông báo</p>
-                  </div>
-                  <Image
-                    className={`object-contain md:w-1/2 h-auto self-center`}
+                  <ImageComponent
+                    className={`object-contain md:w-3/4 h-auto self-center`}
                     src="/images/project/final/noti-filter.png"
                     priority
                     width={1418}
                     height={903}
                     alt="noti-filter"
-                  ></Image>
-                  <div className="flex flex-row gap-2 items-center">
-                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
-                    <p className="flex-1">
-                      Tạo thông báo (Có gửi thông báo và email)
-                    </p>
-                  </div>
-                  <Image
-                    className={`object-contain md:w-1/2 h-auto self-center`}
+                  ></ImageComponent>
+                  <p className="flex-1 self-center text-base italic mb-4">
+                    Lọc thông báo
+                  </p>
+                  <ImageComponent
+                    className={`object-contain md:w-3/4 h-auto self-center`}
                     src="/images/project/final/noti-create.png"
                     priority
                     width={1418}
                     height={903}
                     alt="noti-create"
-                  ></Image>
-                  <div className="flex flex-row gap-2 items-center">
-                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
-                    <p className="flex-1">Đánh dấu đã đọc thông báo</p>
-                  </div>
-                  <Image
-                    className={`object-contain md:w-1/2 h-auto self-center`}
+                  ></ImageComponent>
+                  <p className="flex-1 self-center text-base italic mb-4">
+                    Tạo thông báo (Có gửi thông báo và email)
+                  </p>
+                  <ImageComponent
+                    className={`object-contain md:w-3/4 h-auto self-center`}
                     src="/images/project/final/noti-mark.png"
                     priority
                     width={1418}
                     height={903}
                     alt="noti-mark"
-                  ></Image>
+                  ></ImageComponent>
+                  <p className="flex-1 self-center text-base italic mb-4">
+                    Đánh dấu đã đọc thông báo
+                  </p>
                 </div>
               </AccordionContent>
             </AccordionItem>
@@ -673,42 +627,39 @@ const ProjectPage = () => {
               </AccordionTrigger>
               <AccordionContent>
                 <div className="flex flex-col gap-2 mt-4">
-                  <div className="flex flex-row gap-2 items-center">
-                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
-                    <p className="flex-1">Đổi mật khẩu</p>
-                  </div>
-                  <Image
-                    className={`object-contain md:w-1/2 h-auto self-center`}
+                  <ImageComponent
+                    className={`object-contain md:w-3/4 h-auto self-center`}
                     src="/images/project/final/profile-password.png"
                     priority
                     width={1418}
                     height={903}
                     alt="profile-password"
-                  ></Image>
-                  <div className="flex flex-row gap-2 items-center">
-                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
-                    <p className="flex-1">Xem thông tin cá nhân</p>
-                  </div>
-                  <Image
-                    className={`object-contain md:w-1/2 h-auto self-center`}
+                  ></ImageComponent>
+                  <p className="flex-1 self-center text-base italic mb-4">
+                    Đổi mật khẩu
+                  </p>
+                  <ImageComponent
+                    className={`object-contain md:w-3/4 h-auto self-center`}
                     src="/images/project/final/profile-detail.png"
                     priority
                     width={1418}
                     height={903}
                     alt="profile-detail"
-                  ></Image>
-                  <div className="flex flex-row gap-2 items-center">
-                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
-                    <p className="flex-1">Chỉnh sửa thông tin cơ bản</p>
-                  </div>
-                  <Image
-                    className={`object-contain md:w-1/2 h-auto self-center`}
+                  ></ImageComponent>
+                  <p className="flex-1 self-center text-base italic mb-4">
+                    Xem thông tin cá nhân
+                  </p>
+                  <ImageComponent
+                    className={`object-contain md:w-3/4 h-auto self-center`}
                     src="/images/project/final/profile-update.png"
                     priority
                     width={1418}
                     height={903}
                     alt="profile-update"
-                  ></Image>
+                  ></ImageComponent>
+                  <p className="flex-1 self-center text-base italic mb-4">
+                    Chỉnh sửa thông tin cơ bản
+                  </p>
                 </div>
               </AccordionContent>
             </AccordionItem>
@@ -718,84 +669,72 @@ const ProjectPage = () => {
               </AccordionTrigger>
               <AccordionContent>
                 <div className="flex flex-col gap-2 mt-4">
-                  <div className="flex flex-row gap-2 items-center">
-                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
-                    <p className="flex-1">Xem xin nghỉ phép của mình</p>
-                  </div>
-                  <Image
-                    className={`object-contain md:w-1/2 h-auto self-center`}
+                  <ImageComponent
+                    className={`object-contain md:w-3/4 h-auto self-center`}
                     src="/images/project/final/leave-personal.png"
                     priority
                     width={1418}
                     height={903}
                     alt="leave-personal"
-                  ></Image>
-                  <div className="flex flex-row gap-2 items-center">
-                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
-                    <p className="flex-1">Tạo đơn xin nghỉ phép</p>
-                  </div>
-                  <Image
-                    className={`object-contain md:w-1/2 h-auto self-center`}
+                  ></ImageComponent>
+                  <p className="flex-1 self-center text-base italic mb-4">
+                    Xem xin nghỉ phép của mình
+                  </p>
+                  <ImageComponent
+                    className={`object-contain md:w-3/4 h-auto self-center`}
                     src="/images/project/final/leave-create.png"
                     priority
                     width={1418}
                     height={903}
                     alt="leave-create"
-                  ></Image>
-                  <div className="flex flex-row gap-2 items-center">
-                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
-                    <p className="flex-1">
-                      Xóa đơn xin nghỉ phép (Có gửi thông báo và email)
-                    </p>
-                  </div>
-                  <Image
-                    className={`object-contain md:w-1/2 h-auto self-center`}
+                  ></ImageComponent>
+                  <p className="flex-1 self-center text-base italic mb-4">
+                    Tạo đơn xin nghỉ phép
+                  </p>
+                  <ImageComponent
+                    className={`object-contain md:w-3/4 h-auto self-center`}
                     src="/images/project/final/leave-delete.png"
                     priority
                     width={1418}
                     height={903}
                     alt="leave-delete"
-                  ></Image>
-                  <div className="flex flex-row gap-2 items-center">
-                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
-                    <p className="flex-1">Lọc đơn xin nghỉ phép nhân viên</p>
-                  </div>
-                  <Image
-                    className={`object-contain md:w-1/2 h-auto self-center`}
+                  ></ImageComponent>
+                  <p className="flex-1 self-center text-base italic mb-4">
+                    Xóa đơn xin nghỉ phép (Có gửi thông báo và email)
+                  </p>
+                  <ImageComponent
+                    className={`object-contain md:w-3/4 h-auto self-center`}
                     src="/images/project/final/leave-filter.png"
                     priority
                     width={1418}
                     height={903}
                     alt="leave-filter"
-                  ></Image>
-                  <div className="flex flex-row gap-2 items-center">
-                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
-                    <p className="flex-1">
-                      Duyệt đơn xin nghỉ phép (Có gửi thông báo và email)
-                    </p>
-                  </div>
-                  <Image
-                    className={`object-contain md:w-1/2 h-auto self-center`}
+                  ></ImageComponent>
+                  <p className="flex-1 self-center text-base italic mb-4">
+                    Lọc đơn xin nghỉ phép nhân viên
+                  </p>
+                  <ImageComponent
+                    className={`object-contain md:w-3/4 h-auto self-center`}
                     src="/images/project/final/leave-approve.png"
                     priority
                     width={1418}
                     height={903}
                     alt="leave-approve"
-                  ></Image>
-                  <div className="flex flex-row gap-2 items-center">
-                    <PiNavigationArrowFill className="text-primary h-4 w-4 inline-block rotate-[135deg]" />
-                    <p className="flex-1">
-                      Từ chối đơn xin nghỉ phép (Có gửi thông báo và email)
-                    </p>
-                  </div>
-                  <Image
-                    className={`object-contain md:w-1/2 h-auto self-center`}
+                  ></ImageComponent>
+                  <p className="flex-1 self-center text-base italic mb-4">
+                    Duyệt đơn xin nghỉ phép (Có gửi thông báo và email)
+                  </p>
+                  <ImageComponent
+                    className={`object-contain md:w-3/4 h-auto self-center`}
                     src="/images/project/final/leave-reject.png"
                     priority
                     width={1418}
                     height={903}
                     alt="leave-reject"
-                  ></Image>
+                  ></ImageComponent>
+                  <p className="flex-1 self-center text-base italic mb-4">
+                    Từ chối đơn xin nghỉ phép (Có gửi thông báo và email)
+                  </p>
                 </div>
               </AccordionContent>
             </AccordionItem>
